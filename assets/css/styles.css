@@ -420,7 +420,15 @@ em { font-style: normal; color: var(--teal); font-weight: inherit; }
 .section-head .lede { color: var(--ink-soft); }
 
 /* ── Story / About Tania ────────────────────────────── */
-.story { background: var(--paper); }
+.story { background: var(--paper); position: relative; }
+.story::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  width: 40%; height: 60%;
+  background: radial-gradient(circle at top right, var(--teal-soft) 0%, transparent 60%);
+  pointer-events: none;
+}
 .story-grid {
   display: grid;
   grid-template-columns: 5fr 6fr;
@@ -466,60 +474,97 @@ em { font-style: normal; color: var(--teal); font-weight: inherit; }
 }
 .story-attrib .div { width: 24px; height: 1px; background: var(--mute); }
 
-/* ── Practice areas ─────────────────────────────────── */
+/* ── Practice areas — visual cards, teal accents ──── */
+.practice { background: linear-gradient(180deg, var(--white) 0%, var(--paper) 100%); }
 .practice-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.4rem 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
-@media (max-width: 720px) { .practice-list { grid-template-columns: 1fr; gap: 2rem; } }
+@media (max-width: 980px) { .practice-list { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .practice-list { grid-template-columns: 1fr; } }
 .practice-item {
-  padding: 0 0 0.4rem 0;
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--line-soft);
+  border-radius: 12px;
+  padding: 1.6rem 1.4rem 1.4rem 1.6rem;
+  transition: transform var(--d-base) var(--ease), box-shadow var(--d-base) var(--ease), border-color var(--d-base) var(--ease);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: hidden;
+  isolation: isolate;
 }
+.practice-item::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--teal);
+  transform: scaleY(0.3);
+  transform-origin: top;
+  transition: transform var(--d-base) var(--ease);
+}
+.practice-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--teal);
+  box-shadow: 0 22px 40px -22px rgba(71, 143, 142, 0.32);
+}
+.practice-item:hover::before { transform: scaleY(1); }
 .practice-item .num {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   color: var(--teal);
-  margin-bottom: 0.6rem;
   text-transform: uppercase;
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.practice-item .num::before {
+  content: "";
+  width: 18px; height: 1px;
+  background: var(--teal);
+  display: inline-block;
 }
 .practice-item h3 {
-  font-size: 1.4rem;
-  line-height: 1.2;
-  margin-bottom: 0.7rem;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  margin: 0.2rem 0 0.4rem;
   font-weight: 600;
   letter-spacing: -0.018em;
   color: var(--ink);
 }
 .practice-item p {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.55;
   color: var(--ink-soft);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
+  flex-grow: 1;
 }
-.practice-item .more { font-size: 0.85rem; }
+.practice-item .more { font-size: 0.82rem; margin-top: auto; }
 
-/* ── Areas served — city cards ───────────────────────── */
-.areas { background: var(--paper); }
+/* ── Areas served — small city cards with subtle map flair ── */
+.areas { background: linear-gradient(180deg, var(--paper) 0%, #F0E8D5 100%); }
 .cities {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.7rem;
 }
 @media (max-width: 980px) { .cities { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 720px) { .cities { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; } }
+@media (max-width: 540px) { .cities { grid-template-columns: repeat(2, 1fr); } }
 .city-card {
   position: relative;
-  aspect-ratio: 1 / 1;
   background: var(--white);
   border: 1px solid var(--line-soft);
   border-radius: 8px;
-  padding: 1.2rem;
+  padding: 0.95rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 0.6rem;
+  min-height: 110px;
   transition: transform var(--d-base) var(--ease), border-color var(--d-base) var(--ease), box-shadow var(--d-base) var(--ease);
   overflow: hidden;
   isolation: isolate;
@@ -527,13 +572,14 @@ em { font-style: normal; color: var(--teal); font-weight: inherit; }
 .city-card::before {
   content: "";
   position: absolute;
-  inset: auto 0 0 0;
-  height: 50%;
-  background:
-    linear-gradient(180deg, transparent 0%, rgba(71, 143, 142, 0.05) 100%);
+  inset: auto -20% -40% auto;
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(71, 143, 142, 0.18) 0%, transparent 70%);
   z-index: -1;
-  transition: background var(--d-base) var(--ease);
+  transition: transform var(--d-base) var(--ease);
 }
+.city-card:hover::before { transform: scale(1.4); }
 .city-card:hover {
   transform: translateY(-3px);
   border-color: var(--teal);
@@ -543,47 +589,42 @@ em { font-style: normal; color: var(--teal); font-weight: inherit; }
   background: linear-gradient(180deg, transparent 0%, rgba(71, 143, 142, 0.12) 100%);
 }
 .city-card .city-name {
-  font-size: 1.1rem;
+  font-size: 0.98rem;
   font-weight: 600;
   color: var(--ink);
-  letter-spacing: -0.012em;
-  line-height: 1.2;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
 }
 .city-card .city-state {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--mute);
-  margin-top: 0.2rem;
+  margin-top: 0.15rem;
 }
 .city-card .city-go {
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--teal);
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.3rem;
 }
 .city-card .city-go::after { content: "→"; transition: transform var(--d-base) var(--ease); }
 .city-card:hover .city-go::after { transform: translateX(3px); }
 
 /* Highlight cities with offices */
-.city-card.has-office { border-color: var(--teal); background: linear-gradient(180deg, var(--white) 0%, rgba(71, 143, 142, 0.05) 100%); }
+.city-card.has-office { border-color: var(--teal); background: linear-gradient(165deg, var(--white) 0%, rgba(71, 143, 142, 0.10) 100%); }
 .city-card.has-office::after {
-  content: "Office";
+  content: "•";
   position: absolute;
-  top: 0.9rem; right: 0.9rem;
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--white);
-  background: var(--teal);
-  padding: 0.2rem 0.5rem;
-  border-radius: 3px;
+  top: 0.7rem; right: 0.85rem;
+  font-size: 1rem;
+  color: var(--teal);
+  line-height: 1;
 }
 
 /* ── Case results ──────────────────────────────────── */
@@ -642,7 +683,7 @@ em { font-style: normal; color: var(--teal); font-weight: inherit; }
 }
 
 /* ── Reviews ───────────────────────────────────────── */
-.reviews { background: var(--paper); }
+.reviews { background: linear-gradient(180deg, #F0E8D5 0%, var(--paper) 100%); overflow: hidden; }
 .reviews-head {
   display: flex;
   align-items: end;
@@ -687,22 +728,36 @@ em { font-style: normal; color: var(--teal); font-weight: inherit; }
 .gbadge .gtxt .num { font-weight: 600; }
 .gbadge .gtxt .sub { color: var(--mute); }
 
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
+/* Reviews — auto-rotating marquee */
+.reviews-marquee {
+  position: relative;
+  overflow: hidden;
+  margin-left: calc(var(--pad-x) * -1);
+  margin-right: calc(var(--pad-x) * -1);
+  padding: 0.5rem 0;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 6%, black 94%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, black 6%, black 94%, transparent 100%);
 }
-@media (max-width: 980px) { .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 640px) { .reviews-grid { grid-template-columns: 1fr; } }
+.reviews-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: marqueeScroll 80s linear infinite;
+  padding: 0.5rem;
+}
+.reviews-marquee:hover .reviews-track { animation-play-state: paused; }
+@keyframes marqueeScroll { to { transform: translateX(calc(-50% - 0.5rem)); } }
 .review-card {
+  flex: 0 0 340px;
   background: var(--white);
   border: 1px solid var(--line-soft);
-  border-radius: 8px;
-  padding: 1.6rem;
+  border-radius: 10px;
+  padding: 1.4rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
-  min-height: 220px;
+  gap: 0.8rem;
+  min-height: 200px;
+  box-shadow: 0 8px 24px -16px rgba(21, 23, 26, 0.08);
 }
 .review-card .stars { color: var(--rating); letter-spacing: 0.05em; font-size: 0.95rem; }
 .review-card .quote {
