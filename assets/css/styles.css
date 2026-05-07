@@ -22,9 +22,20 @@
   --teal-bright: #75C2C0;
   --teal-soft:   rgba(91, 168, 166, 0.12);
 
-  --gold:        #D9B975;
-  --gold-bright: #E8C885;
-  --gold-soft:   rgba(217, 185, 117, 0.14);
+  /* TLC logo gold — richer brassy tone */
+  --gold:        #C9A658;
+  --gold-bright: #DDBC72;
+  --gold-deep:   #9F7E3D;
+  --gold-soft:   rgba(201, 166, 88, 0.14);
+
+  /* Light-section tokens (paired with dark theme above) */
+  --light-bg:    #FAF6EC;
+  --light-bg-2: #F2EDDF;
+  --light-ink:   #1A1612;
+  --light-ink-2: #4A4339;
+  --light-mute:  #8A8174;
+  --light-line:  rgba(26, 22, 18, 0.10);
+  --light-line-strong: rgba(26, 22, 18, 0.18);
 
   --rating:      #F5B600;
 
@@ -80,27 +91,21 @@ ul { list-style: none; }
 /* Type */
 em { font-style: normal; color: var(--gold); font-weight: inherit; }
 
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.95rem;
-  background: var(--bg-card);
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  font-size: var(--t-eyebrow);
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ink-2);
-}
-.pill::before {
-  content: "";
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--gold);
+/* Simple eyebrow — no pill, no dot */
+.pill, .eyebrow {
   display: inline-block;
+  font-size: var(--t-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 0 1.4rem;
 }
+.pill::before, .eyebrow::before { display: none; content: none; }
+.section-light .pill, .section-light .eyebrow { color: var(--gold-deep); }
 
 .h1 {
   font-family: var(--sans);
