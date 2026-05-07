@@ -52,9 +52,14 @@ say them again.
 
 Don't relitigate these without an explicit ask — he's already said them.
 
-- **Fonts:** Cormorant Garamond (display, italics for emphasis) +
-  Inter (body). NEVER Fraunces — he hated it. Cinzel (TLC's current
-  site font) is also out — too dated.
+- **Fonts:** TBD as of 2026-05-05 v3 reset. NEVER Fraunces (v1, hated).
+  NEVER Cormorant Garamond (v2, also hated — "italicized accents felt
+  too much"). NEVER Cinzel (TLC's current site, dated). Awaiting Giovani's
+  font direction + reference sites before next rebuild.
+- **No italicized accents in headlines.** Giovani specifically said the
+  italic teal `<em>` treatments on words like "in an instant" felt
+  templated and over-designed. Headlines stay plain weight, no italic
+  accent.
 - **Palette:** TLC's actual brand teal `#478F8E` (not the deeper teal
   I made up first). Warm cream `#FAF6EE` paper. Near-black `#1A1A1A`.
   Refined cream-gold accent `#C9A84F`. Lots of white.
