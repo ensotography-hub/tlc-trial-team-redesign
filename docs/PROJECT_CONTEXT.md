@@ -1,6 +1,6 @@
 # TLC Trial Team — Project Context
 
-_Last updated: 2026-05-05 (after homepage v2 build, repo init, continuity docs added). Canonical brief for any Claude picking up this project cold._
+_Last updated: 2026-05-11 (after homepage v9 editorial rebuild — Instrument Serif, cream theme, real Tania portrait, $1.4M anchor + ledger, numbered practice list). Canonical brief for any Claude picking up this project cold._
 
 > **Maintainer's rule:** every ship updates §10 in the same commit. If you're reading a phase entry and `git log --oneline -5` shows newer commits than the latest §10 entry, the doc is stale — fix it before moving on.
 
@@ -31,9 +31,10 @@ five-star Google reviews, biggest recent settlement $1.4M.
 ## 2. Stack
 
 - **Framework:** None. Plain static HTML / CSS / JS.
-- **Fonts:** Cormorant Garamond (display, Google Fonts) + Inter (body).
-  NEVER Fraunces (Giovani hated it on v1). NEVER Cinzel (TLC's current
-  site font — too dated).
+- **Fonts:** Instrument Serif (display, Google Fonts) + Inter (body).
+  NEVER Fraunces (v1, hated). NEVER Cormorant Garamond (v2, hated).
+  NEVER Cinzel (TLC's current site font — too dated). NEVER Playfair
+  Display (v8, too generic).
 - **Motion:** Lenis smooth scroll (CDN). IntersectionObserver-based
   scroll reveals. NO fade-based word rotators (Giovani has called them
   glitchy).
@@ -216,6 +217,28 @@ See `docs/ship-sop.md` for the full template. Summary:
 - Real award badges (NTL Top 100, Multi-Million Advocates, Top Attorney
   2022, Avvo, FL Justice) replace the prior fake badges.
 - Tania's verbatim copy throughout.
+
+### Phase 9 — editorial reset (2026-05-11)
+- Full homepage rewrite from "law-firm template" to "editorial luxury brand."
+- **Font:** Playfair Display → **Instrument Serif** (Google Fonts) + Inter. More designed, magazine-like personality, no italic-accent dependency.
+- **Theme:** flipped from dark warm-black header/hero to **cream-dominant**. Matches TLC's actual brand surface. Solves the "TLC logo on dark = invisible TRIAL TEAM text" bug.
+- **Logo:** swapped to the real `tlc-logo-horz.png` pulled from tlctrialteam.com (full mark + wordmark).
+- **Hero portrait bug fixed:** the old `tania-clark.png` is actually a 6-person team photo, not a portrait. Pulled the real solo Tania portrait from their site (`tania-portrait.jpg`) and put it in the hero. Team photo moved to the About section as context.
+- **Killed templated patterns:**
+  - Removed all `eyebrow::before` dash decorations (the AI-design tell)
+  - Replaced with numbered editorial kickers ("No. 01 — Recent Results")
+  - Removed the "MILLIONS RECOVERED" gold-caps bar from hero
+  - Removed the boxy 3×2 practice-area icon-card grid
+  - Removed the auto-scroll reviews marquee
+  - Removed the embedded Google Maps iframes in Areas We Serve
+- **Case Results restructure:** returned to original brief — ONE dominant `$1.4M` figure with case context, plus a 5-row ledger of other recent recoveries (no boxy cards).
+- **Practice Areas restructure:** numbered editorial list (01–06) with name + thin description + arrow; no icons, no cards.
+- **Areas We Serve restructure:** three offices as designed type blocks (kicker, city name, address, phone, directions), with a flowing italic "also serving" line below.
+- **Reviews restructure:** one large featured pull-quote + a compact 3-up row + "Read all 172 on Google →" link.
+- **Contact restructure:** light cream section with a clean white form (no dark form block).
+- **Footer:** kept dark for contrast against cream page, 4-col tightened.
+- Files: `index.html` rewritten end-to-end. `assets/css/styles.css` rewritten as V9 (~870 lines, fully tokenized).
+- New assets: `tania-portrait.jpg`, `tlc-logo-horz.png`, `tlc-office.png` (pulled from tlctrialteam.com).
 
 ### Phase 2 — repo + deployment (2026-05-05 evening)
 - Created `github.com/ensotography-hub/tlc-trial-team-redesign` (public).
