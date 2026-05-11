@@ -1,6 +1,6 @@
 # TLC Trial Team — Project Context
 
-_Last updated: 2026-05-11 (after homepage v9 editorial rebuild — Instrument Serif, cream theme, real Tania portrait, $1.4M anchor + ledger, numbered practice list). Canonical brief for any Claude picking up this project cold._
+_Last updated: 2026-05-11 (after homepage v10 cinematic rebuild — navy + gold, reference-layout pivot per Giovani's chosen direction). Canonical brief for any Claude picking up this project cold._
 
 > **Maintainer's rule:** every ship updates §10 in the same commit. If you're reading a phase entry and `git log --oneline -5` shows newer commits than the latest §10 entry, the doc is stale — fix it before moving on.
 
@@ -217,6 +217,26 @@ See `docs/ship-sop.md` for the full template. Summary:
 - Real award badges (NTL Top 100, Multi-Million Advocates, Top Attorney
   2022, Avvo, FL Justice) replace the prior fake badges.
 - Tania's verbatim copy throughout.
+
+### Phase 10 — cinematic reference pivot (2026-05-11)
+- Giovani showed a reference design (3-attorney trial-lawyer template). Loved the LAYOUT — keeping the structure, not the brand.
+- Adopted structure: dark hero with photo + accent CTA → cream stat tiles → photo practice cards → dark Why-Choose with team shot + checkmarks → big quote banner → light info → dark footer.
+- **Adaptations from the reference** (logged so future Claude doesn't relitigate):
+  - **Accent: GOLD, not red.** TLC's logo is gold — red would clash with the brand mark. If Giovani asks for red later, swap `--gold` for `--red`.
+  - **Photography: real Tania + team, NOT stock male attorneys.** Reference used AI-stock men at a Tampa waterfront — wrong for a woman-led firm. Tania's solo portrait in hero, team shot in Why-Choose.
+  - **Numbers: real TLC settlements** ($1.4M, $850K, $800K, $775K, $750K). Reference showed inflated $15.3M / $8.2M / etc. — those aren't TLC's actual track record and would expose us on review.
+- **Header:** dark navy, logo left, nav center, gold phone CTA right (matches reference exactly).
+- **Hero:** "We Don't Settle For Less. **We Win.**" — second line in gold. Tania portrait right with floating attribution chip. Free Case Review (gold) + Our Results (ghost) CTAs.
+- **Results:** 5 horizontal stat tiles in cream section, gold figures with K/M unit treatment.
+- **Practice cards:** 6 cards, each with dark navy art panel + icon (no real photos sourced yet — could upgrade later with actual moody crash/courtroom imagery).
+- **Why Choose dark section:** team photo left, "Trial Lawyers. **Not Settlers.**" headline, 4 gold checkmark bullets, MEET THE TEAM gold CTA.
+- **About Tania kept:** her Cuba story + portrait + sig. Critical to the brand even though the reference didn't have it.
+- **Testimonial banner:** dark navy with giant gold quote mark + italic blockquote + REAL CLIENT-style attribution.
+- **Offices:** light cream, 3 office type-blocks separated by hairlines (no map iframes).
+- **Contact form:** light cream section with clean white card form.
+- **Footer:** dark navy 5-col grid — brand + socials / Quick Links / Practice / Contact / boxed Free Case Review CTA.
+- Files: `index.html` rewritten end-to-end. `assets/css/styles.css` rewritten as V10 (~870 lines).
+- Font: Instrument Serif + Inter (kept from v9).
 
 ### Phase 9 — editorial reset (2026-05-11)
 - Full homepage rewrite from "law-firm template" to "editorial luxury brand."
