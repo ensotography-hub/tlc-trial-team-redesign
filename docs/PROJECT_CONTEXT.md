@@ -1,6 +1,6 @@
 # TLC Trial Team — Project Context
 
-_Last updated: 2026-05-12 (after homepage v13 mobile hero polish — fixed mobile text flow and made the team image seamless/full-width). Canonical brief for any Claude picking up this project cold._
+_Last updated: 2026-05-12 (after homepage v15 professional reset — lighter visual system, typographic recognition band, and cleaner container alignment). Canonical brief for any Claude picking up this project cold._
 
 > **Maintainer's rule:** every ship updates §10 in the same commit. If you're reading a phase entry and `git log --oneline -5` shows newer commits than the latest §10 entry, the doc is stale — fix it before moving on.
 
@@ -238,6 +238,21 @@ See `docs/ship-sop.md` for the full template. Summary:
 - Shortened the hero kicker, subhead, and lede so mobile reads cleaner and less cramped.
 - Mobile hero now reorders content: kicker → title → subhead → full-width team photo → lede → CTAs → proof row.
 - Team photo now breaks out to full mobile viewport width inside the hero, removing the squeezed desktop-card feel while preserving the full team crop.
+- Files: `index.html`, `assets/css/styles.css`, `docs/PROJECT_CONTEXT.md`.
+
+### Phase 14 — recognition band polish (2026-05-12)
+- User flagged the awards strip as designer-cringe / AI-slop; prior version had mismatched badge scale, random whitespace, and softening effects.
+- Rebuilt the strip as a structured recognition band with left-side proof copy and five evenly spaced badge cells.
+- Removed opacity, blend, and filter effects from award images so the source assets render sharper.
+- Added controlled per-badge max sizes to avoid upscaling and to balance wide, square, and tall badge shapes across desktop and mobile.
+- Files: `index.html`, `assets/css/styles.css`, `docs/PROJECT_CONTEXT.md`.
+
+### Phase 15 — professional reset (2026-05-12)
+- User clarified the issue was the whole site feeling AI-generated, not just the awards strip.
+- Pivoted away from the dark cinematic/template look into a lighter, quieter, more professional visual system with cleaner container alignment.
+- Header and hero now use cream/light surfaces, real logo coloring, restrained CTAs, and the team image as a polished editorial asset instead of a dark promo card.
+- Recognition area no longer uses messy award image files; replaced with a typographic proof band to avoid white-box logos and masking hacks.
+- Instagram and blog sections were restyled to match the lighter system so they feel like part of the same site instead of separate modules.
 - Files: `index.html`, `assets/css/styles.css`, `docs/PROJECT_CONTEXT.md`.
 
 ### Phase 10 — cinematic reference pivot (2026-05-11)
