@@ -1,6 +1,6 @@
 # TLC Trial Team — Project Context
 
-_Last updated: 2026-05-11 (after homepage v10 cinematic rebuild — navy + gold, reference-layout pivot per Giovani's chosen direction). Canonical brief for any Claude picking up this project cold._
+_Last updated: 2026-05-12 (after homepage v13 mobile hero polish — fixed mobile text flow and made the team image seamless/full-width). Canonical brief for any Claude picking up this project cold._
 
 > **Maintainer's rule:** every ship updates §10 in the same commit. If you're reading a phase entry and `git log --oneline -5` shows newer commits than the latest §10 entry, the doc is stale — fix it before moving on.
 
@@ -39,9 +39,8 @@ five-star Google reviews, biggest recent settlement $1.4M.
   scroll reveals. NO fade-based word rotators (Giovani has called them
   glitchy).
 - **Hosting:** Vercel, auto-deploy from `main` of
-  `github.com/ensotography-hub/tlc-trial-team-redesign`. Production URL
-  TBD after Vercel import; will be `tlc-trial-team-redesign.vercel.app`
-  by default.
+  `github.com/ensotography-hub/tlc-trial-team-redesign`. Preview URL:
+  `https://tlc-trial-team-redesign.vercel.app`.
 - **Repo:** Public, owned by `ensotography-hub` GitHub org.
 
 ---
@@ -218,6 +217,29 @@ See `docs/ship-sop.md` for the full template. Summary:
   2022, Avvo, FL Justice) replace the prior fake badges.
 - Tania's verbatim copy throughout.
 
+### Phase 11 — sales-mockup polish (2026-05-12)
+- Giovani clarified the business goal: this homepage is a professional sample to help close Tania on the full website, not a time-heavy full-site art direction exercise.
+- Hero now leads with **TLC Trial Team** and Tania's authority instead of a generic trial-law slogan; added a compact proof bar for `$1.4M`, `172+` reviews, and no-fee-unless-win.
+- Moved real recognition badges directly under the hero so the first screen has immediate credibility without feeling like a trophy wall.
+- Results changed from equal stat tiles to one dominant `$1.4M` recovery plus a clean supporting ledger, which feels more custom and less dashboard-template.
+- Practice areas changed from icon cards to a polished legal index with numbers, concise case notes, and simple hover behavior.
+- Files: `index.html`, `assets/css/styles.css`, `docs/PROJECT_CONTEXT.md`.
+
+### Phase 12 — team hero + Instagram + blog sections (2026-05-12)
+- User asked for the full TLC team image to be in the hero; hero visual now uses `assets/img/tania-clark.png` as a landscape team-photo feature instead of Tania's solo portrait.
+- Hero attribution changed to "Tania L. Clark + TLC Trial Team" with office locations and founder-led bilingual team proof.
+- Added a dark Instagram section with direct CTAs to `@tlctrialteam` and the featured reel `https://www.instagram.com/reels/DOyi4wfDiaO/`, plus a designed reel preview card using the team photo.
+- Added a featured blog section with three education-style posts and a "Read More" CTA to make the homepage feel like a fuller website pitch.
+- Moved the Why Choose visual to Tania's solo portrait to avoid immediately repeating the same team image.
+- Files: `index.html`, `assets/css/styles.css`, `docs/PROJECT_CONTEXT.md`.
+
+### Phase 13 — mobile hero polish (2026-05-12)
+- User flagged that mobile text formatting looked poor and the team photo needed to fit more seamlessly.
+- Shortened the hero kicker, subhead, and lede so mobile reads cleaner and less cramped.
+- Mobile hero now reorders content: kicker → title → subhead → full-width team photo → lede → CTAs → proof row.
+- Team photo now breaks out to full mobile viewport width inside the hero, removing the squeezed desktop-card feel while preserving the full team crop.
+- Files: `index.html`, `assets/css/styles.css`, `docs/PROJECT_CONTEXT.md`.
+
 ### Phase 10 — cinematic reference pivot (2026-05-11)
 - Giovani showed a reference design (3-attorney trial-lawyer template). Loved the LAYOUT — keeping the structure, not the brand.
 - Adopted structure: dark hero with photo + accent CTA → cream stat tiles → photo practice cards → dark Why-Choose with team shot + checkmarks → big quote banner → light info → dark footer.
@@ -275,9 +297,8 @@ See `docs/ship-sop.md` for the full template. Summary:
 
 ## 11. Open work
 
-- [ ] Connect Vercel: import the GitHub repo at vercel.com/new, deploy
-      as static, capture preview URL.
-- [ ] Iterate on homepage v2 based on Giovani's feedback.
+- [x] Connect Vercel: imported GitHub repo, deployed static site, preview URL captured.
+- [ ] Iterate on homepage sales mockup based on Giovani's feedback.
 - [ ] After homepage is locked: build `about.html`, `contact.html`,
       `case-results.html`, `reviews.html`, plus per-practice-area and
       per-city sub-pages following the v2 design system.
