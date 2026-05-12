@@ -1,6 +1,6 @@
 # TLC Trial Team — Project Context
 
-_Last updated: 2026-05-12 (after homepage v15 professional reset — lighter visual system, typographic recognition band, and cleaner container alignment). Canonical brief for any Claude picking up this project cold._
+_Last updated: 2026-05-12 (after homepage v16 cover-led professional concept — full team-photo hero, photo-first mobile, and less module-stacked layout). Canonical brief for any Claude picking up this project cold._
 
 > **Maintainer's rule:** every ship updates §10 in the same commit. If you're reading a phase entry and `git log --oneline -5` shows newer commits than the latest §10 entry, the doc is stale — fix it before moving on.
 
@@ -253,6 +253,14 @@ See `docs/ship-sop.md` for the full template. Summary:
 - Header and hero now use cream/light surfaces, real logo coloring, restrained CTAs, and the team image as a polished editorial asset instead of a dark promo card.
 - Recognition area no longer uses messy award image files; replaced with a typographic proof band to avoid white-box logos and masking hacks.
 - Instagram and blog sections were restyled to match the lighter system so they feel like part of the same site instead of separate modules.
+- Files: `index.html`, `assets/css/styles.css`, `docs/PROJECT_CONTEXT.md`.
+
+### Phase 16 — cover-led professional concept (2026-05-12)
+- User rejected the v15 reset as still looking bad / not designer-level; stopped patching details and changed the first impression again.
+- Hero now uses the team photo as a full photographic cover on desktop, with text over the image instead of a split text/photo layout.
+- Mobile hero is photo-first, then text, so the team image feels intentional and seamless rather than squeezed into a card.
+- Recognition stays typographic, not badge-image based, to avoid white-background insignia issues entirely.
+- Added stronger global overrides for a more unified page system: cleaner header, restrained CTAs, fewer dark-template cues, and quieter social/blog sections.
 - Files: `index.html`, `assets/css/styles.css`, `docs/PROJECT_CONTEXT.md`.
 
 ### Phase 10 — cinematic reference pivot (2026-05-11)

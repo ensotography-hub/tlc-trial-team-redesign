@@ -2073,3 +2073,366 @@ body {
     border-bottom: 0;
   }
 }
+
+/* ─────────────────────────────────────────────────────────────
+   V16 — cover-led professional concept
+   One strong photo-led first impression, tighter proof, and fewer
+   stacked-template cues.
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  --canvas: #F7F3EA;
+  --surface: #FFFFFF;
+  --charcoal: #171411;
+  --charcoal-2: #2D2924;
+  --quiet: #6C655C;
+  --rule: rgba(23, 20, 17, 0.12);
+  --aqua: #478F8E;
+  --aqua-deep: #276260;
+  --brass: #B58A3C;
+  --max: 1160px;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--charcoal-2);
+}
+
+.header {
+  position: sticky;
+  background: rgba(247, 243, 234, 0.94);
+  border-bottom: 1px solid var(--rule);
+}
+.header-row {
+  height: 76px;
+}
+.header .brand img {
+  height: 40px;
+  filter: none;
+}
+.nav {
+  color: rgba(23, 20, 17, 0.68);
+}
+.nav a::after {
+  background: var(--aqua);
+}
+.header-cta {
+  background: var(--charcoal);
+  color: var(--surface);
+  border-radius: 0;
+}
+.header-cta:hover {
+  background: var(--aqua-deep);
+}
+
+.hero {
+  min-height: calc(100svh - 76px);
+  padding: 0;
+  background: var(--charcoal);
+  color: var(--surface);
+}
+.hero-bg {
+  background:
+    linear-gradient(90deg, rgba(18, 22, 21, 0.92) 0%, rgba(18, 22, 21, 0.74) 38%, rgba(18, 22, 21, 0.18) 72%),
+    linear-gradient(180deg, rgba(18, 22, 21, 0.08) 0%, rgba(18, 22, 21, 0.34) 100%),
+    url("../img/tania-clark.png") center center / cover no-repeat;
+}
+.hero::after {
+  opacity: 0;
+}
+.hero-grid {
+  min-height: calc(100svh - 76px);
+  display: grid;
+  grid-template-columns: minmax(0, 560px) 1fr;
+  align-items: end;
+  padding-top: clamp(5rem, 10vw, 9rem);
+  padding-bottom: clamp(2.8rem, 6vw, 5rem);
+}
+.hero-copy {
+  max-width: 560px;
+}
+.hero-kicker {
+  color: rgba(255, 255, 255, 0.76);
+  margin-bottom: 1.15rem;
+}
+.hero-kicker::before {
+  background: var(--aqua);
+}
+.hero-title {
+  color: var(--surface);
+  font-size: clamp(3.8rem, 7.3vw, 6.2rem);
+  line-height: 0.92;
+  max-width: 9ch;
+  margin-bottom: 1rem;
+}
+.hero-subhead {
+  color: #E8C271;
+  font-size: clamp(1.5rem, 2.3vw, 2.15rem);
+  max-width: 23ch;
+  margin-bottom: 1.15rem;
+}
+.hero-lede {
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 39ch;
+  margin-bottom: 1.8rem;
+}
+.hero-actions .btn-primary {
+  background: var(--surface);
+  border-color: var(--surface);
+  color: var(--charcoal);
+}
+.hero-actions .btn-primary:hover {
+  background: #E8C271;
+  border-color: #E8C271;
+}
+.hero-actions .btn-ghost-light {
+  color: var(--surface);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+.hero-actions .btn-ghost-light:hover {
+  background: var(--surface);
+  color: var(--charcoal);
+}
+.hero-proof {
+  max-width: 560px;
+  border-top-color: rgba(255, 255, 255, 0.22);
+  border-bottom-color: rgba(255, 255, 255, 0.16);
+}
+.hero-proof span {
+  color: rgba(255, 255, 255, 0.58);
+  border-right-color: rgba(255, 255, 255, 0.14);
+}
+.hero-proof strong {
+  color: var(--surface);
+}
+.hero-portrait {
+  display: none;
+}
+
+.proof-strip {
+  background: var(--surface);
+}
+.proof-strip-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.34fr) 1fr;
+  align-items: stretch;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.proof-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.6rem clamp(1.4rem, 3vw, 2rem) 1.6rem 0;
+}
+.proof-label {
+  color: var(--aqua-deep);
+}
+.proof-list {
+  border-top: 0;
+  border-bottom: 0;
+}
+.proof-item {
+  min-height: 116px;
+  padding: 1rem 1.05rem;
+}
+.proof-item dt {
+  color: var(--aqua-deep);
+  font-size: 0.66rem;
+}
+.proof-item dd {
+  color: var(--charcoal);
+}
+
+.section {
+  padding-top: var(--section);
+  padding-bottom: var(--section);
+}
+.results,
+.practice,
+.blog-section,
+.offices-section,
+.contact {
+  background: var(--canvas);
+}
+.results-head,
+.practice-head,
+.blog-head,
+.contact-grid,
+.about-grid {
+  gap: clamp(2rem, 5vw, 4rem);
+}
+.result-feature {
+  background: var(--charcoal);
+}
+.result-feature::after {
+  background: var(--aqua);
+}
+.ledger-row,
+.practice-item,
+.blog-card,
+.office {
+  border-color: var(--rule);
+}
+
+.practice-list,
+.blog-grid,
+.offices {
+  border-top-color: var(--rule);
+  border-bottom-color: var(--rule);
+}
+
+.why {
+  background: #1C2422;
+}
+.why-photo {
+  border: 0;
+}
+.why-body h2,
+.testimonial blockquote,
+.instagram-copy h2 {
+  text-wrap: balance;
+}
+
+.instagram-section {
+  background: var(--surface);
+  color: var(--charcoal);
+}
+.instagram-section::before {
+  background: linear-gradient(90deg, rgba(71, 143, 142, 0.07), transparent 46%);
+}
+.instagram-grid {
+  grid-template-columns: 0.82fr 1.18fr;
+}
+.instagram-copy h2 {
+  color: var(--charcoal);
+}
+.instagram-copy p {
+  color: var(--charcoal-2);
+}
+.instagram-actions .btn-primary {
+  background: var(--charcoal);
+  border-color: var(--charcoal);
+  color: var(--surface);
+}
+.instagram-actions .btn-ghost-light {
+  color: var(--charcoal);
+  border-color: rgba(23, 20, 17, 0.24);
+}
+.reel-card {
+  background: var(--canvas);
+  border: 1px solid var(--rule);
+  box-shadow: none;
+}
+.reel-frame {
+  min-height: 320px;
+}
+.reel-frame img {
+  min-height: 320px;
+}
+.reel-play {
+  background: var(--charcoal);
+  color: var(--surface);
+}
+
+.blog-card {
+  background: transparent;
+}
+.blog-card:hover {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+@media (max-width: 960px) {
+  .hero-grid,
+  .instagram-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: auto;
+    background: var(--charcoal);
+  }
+  .hero-bg {
+    background:
+      linear-gradient(180deg, rgba(18, 22, 21, 0.02) 0%, rgba(18, 22, 21, 0.10) 36%, rgba(18, 22, 21, 0.96) 68%, rgba(18, 22, 21, 1) 100%),
+      url("../img/tania-clark.png") center top / 100% auto no-repeat,
+      var(--charcoal);
+  }
+  .hero-grid {
+    min-height: 780px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 360px;
+    padding-bottom: 2rem;
+  }
+  .hero-copy {
+    display: block;
+    max-width: none;
+  }
+  .hero-kicker,
+  .hero-title,
+  .hero-subhead,
+  .hero-lede,
+  .hero-actions,
+  .hero-proof {
+    order: initial;
+  }
+  .hero-kicker {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+  .hero-title {
+    color: var(--surface);
+    font-size: clamp(3.1rem, 15vw, 4rem);
+    max-width: 8ch;
+    margin-bottom: 0.8rem;
+  }
+  .hero-subhead {
+    color: #E8C271;
+    font-size: 1.32rem;
+    max-width: 18ch;
+  }
+  .hero-lede {
+    color: rgba(255, 255, 255, 0.76);
+    max-width: 31ch;
+    margin-bottom: 1.2rem;
+  }
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-proof {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .hero-proof span {
+    padding: 0.75rem 0.48rem 0.75rem 0;
+    font-size: 0.56rem;
+  }
+  .hero-proof strong {
+    font-size: 1rem;
+  }
+  .proof-strip-row {
+    grid-template-columns: 1fr;
+  }
+  .proof-copy {
+    border-right: 0;
+    padding: 1.4rem 0 0.5rem;
+  }
+  .proof-list {
+    grid-template-columns: 1fr;
+    border-top: 1px solid var(--rule);
+  }
+  .proof-item {
+    min-height: auto;
+    padding: 1rem 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .proof-item:last-child {
+    border-bottom: 0;
+  }
+}
