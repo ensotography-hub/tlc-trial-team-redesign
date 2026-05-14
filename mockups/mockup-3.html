@@ -36,7 +36,7 @@
     letter-spacing: -0.005em;
   }
 
-  /* HEADER — light, with hamburger right */
+  /* HEADER */
   .hdr {
     position: sticky; top: 0; z-index: 50;
     background: rgba(255, 255, 255, 0.82);
@@ -72,34 +72,8 @@
   .burger span::before { position: absolute; left: 0; top: -5px; }
   .burger span::after { position: absolute; left: 0; top: 5px; }
 
-  /* HERO — light, contained photo card on top */
-  .hero { padding: 1.4rem 1.4rem 3rem; }
-
-  .photo {
-    position: relative;
-    border-radius: 14px;
-    overflow: hidden;
-    aspect-ratio: 4 / 3.6;
-    background: var(--paper);
-    margin-bottom: 2.4rem;
-    box-shadow: 0 20px 50px -28px rgba(19, 18, 17, 0.30);
-  }
-  .photo img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    object-position: center 22%;
-    display: block;
-  }
-  /* Gold underline accent at the bottom of the photo card */
-  .photo::after {
-    content: "";
-    position: absolute;
-    left: 50%; bottom: 0;
-    transform: translateX(-50%);
-    width: 60px; height: 3px;
-    background: var(--gold);
-    border-radius: 2px 2px 0 0;
-  }
+  /* HERO — text first close to header, photo below CTAs */
+  .hero { padding: 1.6rem 1.4rem 3rem; }
 
   .hero-copy { text-align: center; }
 
@@ -110,19 +84,20 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--gold-deep);
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
   }
 
   h1 {
     font-family: var(--display);
     font-weight: 500;
-    font-size: clamp(2.2rem, 9vw, 2.8rem);
+    font-size: clamp(2.2rem, 8.5vw, 2.7rem);
     line-height: 1.04;
     letter-spacing: -0.035em;
     color: var(--ink);
-    margin: 0 auto 1.2rem;
-    max-width: 13ch;
+    margin: 0 auto 1rem;
+    max-width: 18ch;
   }
+  h1 .l2 { display: block; }
 
   .sub-accent {
     font-family: var(--display);
@@ -130,16 +105,16 @@
     font-weight: 400;
     font-size: 1.4rem;
     color: var(--gold);
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.2rem;
     letter-spacing: -0.02em;
   }
 
   .lede {
-    font-size: 1rem;
+    font-size: 0.96rem;
     line-height: 1.6;
     color: var(--ink-3);
-    margin: 0 auto 2rem;
-    max-width: 36ch;
+    margin: 0 auto 1.8rem;
+    max-width: 34ch;
   }
 
   .cta {
@@ -147,7 +122,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0.7rem;
-    margin-bottom: 2.8rem;
+    margin-bottom: 2rem;
   }
   .btn-primary {
     display: inline-flex;
@@ -183,7 +158,34 @@
   }
   .btn-phone svg { width: 14px; height: 14px; color: var(--gold-2); }
 
-  /* STATS — clean horizontal hairline divider between rows */
+  /* PHOTO — moved BELOW the CTAs */
+  .photo {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3.6;
+    background: var(--paper);
+    margin: 0 auto 2.4rem;
+    max-width: 100%;
+    box-shadow: 0 20px 50px -28px rgba(19, 18, 17, 0.30);
+  }
+  .photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 22%;
+    display: block;
+  }
+  .photo::after {
+    content: "";
+    position: absolute;
+    left: 50%; bottom: 0;
+    transform: translateX(-50%);
+    width: 60px; height: 3px;
+    background: var(--gold);
+    border-radius: 2px 2px 0 0;
+  }
+
+  /* STATS — 2x2 with hairline dividers */
   .stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -259,13 +261,9 @@
 </header>
 
 <section class="hero">
-  <div class="photo">
-    <img src="../assets/img/tania-clark.png" alt="The TLC Trial Team">
-  </div>
-
   <div class="hero-copy">
     <span class="kicker">Florida Personal Injury Trial Team</span>
-    <h1>Fighting for Florida accident victims for almost 20 years.</h1>
+    <h1>Fighting for Florida accident victims.<span class="l2">For almost 20 years.</span></h1>
     <div class="sub-accent">Millions recovered.</div>
     <p class="lede">A car accident is a traumatic event that is life altering. In an instant, everything changes. We are here to fight for you.</p>
 
@@ -279,24 +277,28 @@
         (877) 299-5539
       </a>
     </div>
+  </div>
 
-    <div class="stats">
-      <div class="stat">
-        <span class="stat-fig">$1.4M<em>+</em></span>
-        <span class="stat-label">Recent recovery</span>
-      </div>
-      <div class="stat">
-        <span class="stat-fig">172<em>+</em></span>
-        <span class="stat-label">5-star reviews</span>
-      </div>
-      <div class="stat">
-        <span class="stat-fig">20<em>yrs</em></span>
-        <span class="stat-label">Trial experience</span>
-      </div>
-      <div class="stat">
-        <span class="stat-fig">$0</span>
-        <span class="stat-label">Unless we win</span>
-      </div>
+  <div class="photo">
+    <img src="../assets/img/tania-clark.png" alt="The TLC Trial Team">
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-fig">$1.4M<em>+</em></span>
+      <span class="stat-label">Recent recovery</span>
+    </div>
+    <div class="stat">
+      <span class="stat-fig">172<em>+</em></span>
+      <span class="stat-label">5-star reviews</span>
+    </div>
+    <div class="stat">
+      <span class="stat-fig">20<em>yrs</em></span>
+      <span class="stat-label">Trial experience</span>
+    </div>
+    <div class="stat">
+      <span class="stat-fig">$0</span>
+      <span class="stat-label">Unless we win</span>
     </div>
   </div>
 </section>
