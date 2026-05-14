@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#FFFFFF">
+<title>Iteration B — Premium Light Bold · TLC Trial Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+  :root {
+    --white: #FFFFFF;
+    --offwhite: #FAFAF8;
+    --paper: #F5F2EC;
+    --ink: #131211;
+    --ink-2: #3E3B36;
+    --ink-3: #6A655B;
+    --mute: #9A938A;
+    --line: rgba(19, 18, 17, 0.10);
+    --line-soft: rgba(19, 18, 17, 0.06);
+    --gold: #B89149;
+    --gold-2: #C9A876;
+    --gold-deep: #927138;
+    --dark: #0A0A0C;
+    --sans: 'Inter', system-ui, sans-serif;
+    --display: 'Inter Tight', 'Inter', sans-serif;
+    --serif: 'Instrument Serif', Georgia, serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    background: var(--white);
+    color: var(--ink-2);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+  }
+
+  /* HEADER */
+  .hdr {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .hdr-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.4rem;
+    height: 64px;
+  }
+  .brand img { height: 36px; }
+  .burger {
+    width: 44px; height: 44px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: transparent;
+    display: grid; place-items: center;
+    cursor: pointer;
+  }
+  .burger span,
+  .burger span::before,
+  .burger span::after {
+    content: "";
+    display: block;
+    width: 16px; height: 1.5px;
+    background: var(--ink);
+    position: relative;
+  }
+  .burger span::before { position: absolute; left: 0; top: -5px; }
+  .burger span::after { position: absolute; left: 0; top: 5px; }
+
+  /* HERO — big breathing room above kicker, distinctive details */
+  .hero { padding: 3.5rem 1.4rem 3.2rem; }
+
+  /* Trust signal at top — small, refined */
+  .trust-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.85rem;
+    background: var(--offwhite);
+    border: 1px solid var(--line-soft);
+    border-radius: 999px;
+    margin-bottom: 1.4rem;
+    font-size: 0.74rem;
+    color: var(--ink-2);
+    letter-spacing: -0.005em;
+  }
+  .trust-pill .stars { color: var(--gold-2); letter-spacing: 0.06em; font-size: 0.82rem; }
+  .trust-pill .num { font-weight: 600; color: var(--ink); }
+
+  .hero-copy { text-align: center; }
+
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 1.2rem;
+  }
+  .kicker::before {
+    content: "";
+    width: 24px; height: 1px;
+    background: var(--gold-2);
+  }
+  .kicker::after {
+    content: "";
+    width: 24px; height: 1px;
+    background: var(--gold-2);
+  }
+
+  /* H1 with italic serif accent on key word for editorial polish */
+  h1 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(2.3rem, 9vw, 2.85rem);
+    line-height: 1.02;
+    letter-spacing: -0.038em;
+    color: var(--ink);
+    margin: 0 auto 1rem;
+    max-width: 18ch;
+  }
+  h1 em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: -0.02em;
+  }
+  h1 .l2 { display: block; }
+
+  /* Sub-accent: serif italic for editorial feel */
+  .sub-accent {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--gold);
+    margin-bottom: 1.4rem;
+    letter-spacing: -0.005em;
+    line-height: 1;
+  }
+
+  .lede {
+    font-size: 0.96rem;
+    line-height: 1.6;
+    color: var(--ink-3);
+    margin: 0 auto 2rem;
+    max-width: 32ch;
+  }
+
+  /* TWO BUTTONS SIDE BY SIDE */
+  .cta-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto 2.6rem;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    height: 54px;
+    padding: 0 0.8rem;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    text-decoration: none;
+    transition: all 200ms ease;
+    border: 1.5px solid transparent;
+    white-space: nowrap;
+  }
+  .btn svg { width: 14px; height: 14px; transition: transform 200ms ease; }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--white);
+    border-color: var(--ink);
+  }
+  .btn-primary:hover { background: transparent; color: var(--ink); }
+  .btn-outline {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+  .btn-outline:hover { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+  .btn-outline:hover svg { transform: translateX(3px); }
+
+  /* PHOTO — contained, with subtle layered details */
+  .photo-wrap {
+    position: relative;
+    margin: 0 auto 2.6rem;
+    padding: 0.5rem;
+    background: linear-gradient(180deg, var(--offwhite), var(--white));
+    border-radius: 18px;
+    border: 1px solid var(--line-soft);
+    max-width: 100%;
+  }
+  .photo {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3.6;
+    background: var(--paper);
+  }
+  .photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 22%;
+    display: block;
+  }
+  /* Caption pill below the photo, inside the wrap */
+  .photo-cap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 0.6rem;
+    padding: 0.4rem 0.8rem 0.2rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .photo-cap::before, .photo-cap::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line-soft);
+  }
+
+  /* STATS — 2x2 refined */
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid var(--line-soft);
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .stat {
+    text-align: center;
+    padding: 1.1rem 0.6rem;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .stat:nth-child(odd) { border-right: 1px solid var(--line-soft); }
+  .stat:nth-last-child(-n+2) { border-bottom: 0; }
+
+  .stat-fig {
+    display: block;
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+  .stat-fig em {
+    font-style: normal;
+    font-size: 0.6em;
+    color: var(--gold-2);
+    margin-left: 0.04em;
+    font-weight: 500;
+  }
+  .stat-label {
+    font-size: 0.74rem;
+    color: var(--ink-3);
+    letter-spacing: -0.005em;
+  }
+
+  .mockup-tag {
+    position: fixed;
+    bottom: 1rem; right: 1rem;
+    background: rgba(184, 145, 73, 0.10);
+    border: 1px solid var(--gold-2);
+    border-radius: 999px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--gold-deep);
+    letter-spacing: 0.06em;
+    z-index: 100;
+  }
+
+  @media (min-width: 480px) {
+    body {
+      max-width: 420px;
+      margin: 0 auto;
+      box-shadow: 0 0 80px rgba(0,0,0,0.1);
+      background: var(--white);
+      min-height: 100vh;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-row">
+    <a href="#" class="brand"><img src="../assets/img/tlc-logo-horz.png" alt="TLC Trial Team"></a>
+    <button class="burger" aria-label="Menu"><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <div class="trust-pill">
+      <span class="stars">★★★★★</span>
+      <span><span class="num">5.0</span> · 172+ Google reviews</span>
+    </div>
+
+    <span class="kicker">Florida Personal Injury Trial Team</span>
+    <h1>Fighting for <em>Florida</em> accident victims.<span class="l2">For almost 20 years.</span></h1>
+    <div class="sub-accent">Millions recovered.</div>
+    <p class="lede">A car accident is a traumatic event that is life altering. In an instant, everything changes.</p>
+
+    <div class="cta-row">
+      <a href="tel:+18772995539" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        Call Now
+      </a>
+      <a href="#contact" class="btn btn-outline">
+        Free Consultation
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="photo-wrap">
+    <div class="photo">
+      <img src="../assets/img/tania-clark.png" alt="The TLC Trial Team">
+    </div>
+    <div class="photo-cap">Tania L. Clark &amp; the TLC Trial Team</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-fig">$1.4M<em>+</em></span>
+      <span class="stat-label">Recent recovery</span>
+    </div>
+    <div class="stat">
+      <span class="stat-fig">172<em>+</em></span>
+      <span class="stat-label">5-star reviews</span>
+    </div>
+    <div class="stat">
+      <span class="stat-fig">20<em>yrs</em></span>
+      <span class="stat-label">Trial experience</span>
+    </div>
+    <div class="stat">
+      <span class="stat-fig">$0</span>
+      <span class="stat-label">Unless we win</span>
+    </div>
+  </div>
+</section>
+
+<div class="mockup-tag">Iter B · Bold</div>
+</body>
+</html>

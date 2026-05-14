@@ -4,62 +4,131 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TLC Mobile Hero Mockups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap">
 <style>
   :root {
     --ink: #131211;
+    --ink-3: #5C564E;
     --gold: #B89149;
     --gold-2: #C9A876;
+    --gold-deep: #927138;
     --line: rgba(19,18,17,0.10);
+    --line-soft: rgba(19,18,17,0.06);
+    --paper: #F5F2EC;
+    --cream: #FAF8F2;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'Inter', system-ui, sans-serif;
-    background: #F5F2EC;
+    background: var(--cream);
     color: var(--ink);
-    padding: 2rem 1.5rem 4rem;
+    padding: 2.5rem 1.5rem 5rem;
     line-height: 1.6;
+    letter-spacing: -0.005em;
   }
-  .wrap { max-width: 720px; margin: 0 auto; }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+
   h1 {
     font-family: 'Inter Tight', sans-serif;
-    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-size: clamp(2rem, 4.4vw, 2.6rem);
     font-weight: 500;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.035em;
     margin-bottom: 0.6rem;
+    line-height: 1.04;
   }
-  .lede { color: #5C564E; margin-bottom: 2.4rem; max-width: 50ch; }
+  .lede { color: var(--ink-3); margin-bottom: 3rem; max-width: 60ch; font-size: 1.05rem; }
+
+  /* Section header */
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    margin: 0 0 1.4rem;
+    padding-top: 2.5rem;
+  }
+  .sec-head h2 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: -0.022em;
+  }
+  .sec-head .label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+  }
+  .sec-head .rule {
+    flex: 1;
+    height: 1px;
+    background: var(--line-soft);
+  }
+
+  /* Card grid */
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.2rem;
   }
-  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+  .grid-2 { grid-template-columns: 1fr 1fr; gap: 1.4rem; max-width: 760px; }
+  @media (max-width: 720px) {
+    .grid, .grid-2 { grid-template-columns: 1fr; }
+  }
+
   .card {
     background: #fff;
-    border: 1px solid var(--line);
-    border-radius: 12px;
+    border: 1px solid var(--line-soft);
+    border-radius: 14px;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    transition: all 200ms ease;
+    transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    display: block;
   }
-  .card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px -20px rgba(0,0,0,0.18); border-color: var(--gold); }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 20px 40px -22px rgba(0,0,0,0.18); border-color: var(--gold-2); }
   .card iframe {
     width: 100%;
-    height: 720px;
+    height: 760px;
     border: 0;
     background: #000;
     display: block;
     pointer-events: none;
   }
+  .grid-2 .card iframe { height: 820px; }
+
+  .badge {
+    position: absolute;
+    top: 0.8rem; right: 0.8rem;
+    z-index: 2;
+    padding: 0.3rem 0.7rem;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .badge-selected {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #131211;
+  }
+
   .card-meta { padding: 1.2rem 1.4rem 1.4rem; }
   .card-num {
-    font-size: 0.74rem;
+    font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 0.6rem;
+    color: var(--gold-deep);
+    margin-bottom: 0.5rem;
   }
   .card-title {
     font-family: 'Inter Tight', sans-serif;
@@ -68,7 +137,7 @@
     letter-spacing: -0.022em;
     margin-bottom: 0.4rem;
   }
-  .card-desc { font-size: 0.88rem; color: #5C564E; line-height: 1.5; margin-bottom: 0.9rem; }
+  .card-desc { font-size: 0.88rem; color: var(--ink-3); line-height: 1.5; margin-bottom: 0.9rem; }
   .card-link {
     display: inline-flex;
     align-items: center;
@@ -80,20 +149,58 @@
     padding-bottom: 2px;
   }
   .card-link::after { content: "→"; }
+
+  .original-grid .card { opacity: 0.65; }
+  .original-grid .card:hover { opacity: 1; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>Mobile hero mockups</h1>
-  <p class="lede">Three directions for the above-the-fold mobile view. Each is a standalone preview — tap to open in full screen. Pick a direction and we'll iterate from there.</p>
+  <p class="lede">Progress on the above-the-fold mobile design. Iterations build on the chosen direction.</p>
 
-  <div class="grid">
+  <!-- CURRENT ITERATIONS -->
+  <div class="sec-head">
+    <span class="label">Now</span>
+    <h2>Iterations on Premium Light</h2>
+    <span class="rule"></span>
+  </div>
+  <div class="grid grid-2">
+    <a href="v3-a.html" class="card">
+      <span class="badge">Iteration A</span>
+      <iframe src="v3-a.html" scrolling="no"></iframe>
+      <div class="card-meta">
+        <div class="card-num">Iteration A · Refined</div>
+        <div class="card-title">Premium Light · Refined</div>
+        <div class="card-desc">Your feedback applied cleanly. More breathing room above the kicker. Two side-by-side buttons (Call Now + Free Consultation). Subtle gold dot prefix on the kicker.</div>
+        <span class="card-link">Open full</span>
+      </div>
+    </a>
+    <a href="v3-b.html" class="card">
+      <span class="badge">Iteration B</span>
+      <iframe src="v3-b.html" scrolling="no"></iframe>
+      <div class="card-meta">
+        <div class="card-num">Iteration B · Bold</div>
+        <div class="card-title">Premium Light · Bold</div>
+        <div class="card-desc">Pushed further past template. Trust pill at top, italic serif accent on "Florida" in the headline, serif italic "Millions recovered.", photo wrapped in a layered card with caption divider, refined buttons with arrow on outline.</div>
+        <span class="card-link">Open full</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- ORIGINAL DIRECTIONS (for reference) -->
+  <div class="sec-head">
+    <span class="label">History</span>
+    <h2>Original three directions</h2>
+    <span class="rule"></span>
+  </div>
+  <div class="grid original-grid">
     <a href="mockup-1.html" class="card">
       <iframe src="mockup-1.html" scrolling="no"></iframe>
       <div class="card-meta">
         <div class="card-num">Mockup 01</div>
         <div class="card-title">Editorial Dark</div>
-        <div class="card-desc">Text up top close to the header, CTAs, then contained photo below, stats last. Dark surface, gold accents.</div>
+        <div class="card-desc">Dark surface, contained team photo, centered text.</div>
         <span class="card-link">Open full</span>
       </div>
     </a>
@@ -102,16 +209,17 @@
       <div class="card-meta">
         <div class="card-num">Mockup 02</div>
         <div class="card-title">Cinematic Overlay</div>
-        <div class="card-desc">Photo as section background with gradient. Text overlays the lower portion. Stats float on glass card.</div>
+        <div class="card-desc">Photo as section background with text overlay.</div>
         <span class="card-link">Open full</span>
       </div>
     </a>
     <a href="mockup-3.html" class="card">
+      <span class="badge badge-selected">Selected</span>
       <iframe src="mockup-3.html" scrolling="no"></iframe>
       <div class="card-meta">
-        <div class="card-num">Mockup 03</div>
+        <div class="card-num">Mockup 03 · Chosen</div>
         <div class="card-title">Premium Light</div>
-        <div class="card-desc">White surface, text near the header, CTAs, then contained photo card below, stats last. Bright, refined.</div>
+        <div class="card-desc">White surface, contained photo card, centered text — the chosen direction.</div>
         <span class="card-link">Open full</span>
       </div>
     </a>
