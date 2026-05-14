@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TLC Mobile Hero Mockups</title>
+<style>
+  :root {
+    --ink: #131211;
+    --gold: #B89149;
+    --gold-2: #C9A876;
+    --line: rgba(19,18,17,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #F5F2EC;
+    color: var(--ink);
+    padding: 2rem 1.5rem 4rem;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  h1 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.6rem;
+  }
+  .lede { color: #5C564E; margin-bottom: 2.4rem; max-width: 50ch; }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.2rem;
+  }
+  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+  .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: all 200ms ease;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px -20px rgba(0,0,0,0.18); border-color: var(--gold); }
+  .card iframe {
+    width: 100%;
+    height: 720px;
+    border: 0;
+    background: #000;
+    display: block;
+    pointer-events: none;
+  }
+  .card-meta { padding: 1.2rem 1.4rem 1.4rem; }
+  .card-num {
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+  .card-title {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: -0.022em;
+    margin-bottom: 0.4rem;
+  }
+  .card-desc { font-size: 0.88rem; color: #5C564E; line-height: 1.5; margin-bottom: 0.9rem; }
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+  }
+  .card-link::after { content: "→"; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Mobile hero mockups</h1>
+  <p class="lede">Three directions for the above-the-fold mobile view. Each is a standalone preview — tap to open in full screen. Pick a direction and we'll iterate from there.</p>
+
+  <div class="grid">
+    <a href="mockup-1.html" class="card">
+      <iframe src="mockup-1.html" scrolling="no"></iframe>
+      <div class="card-meta">
+        <div class="card-num">Mockup 01</div>
+        <div class="card-title">Editorial Dark</div>
+        <div class="card-desc">Contained team photo on top, centered text below. Dark surface, gold accents. Classic magazine cover feel.</div>
+        <span class="card-link">Open full</span>
+      </div>
+    </a>
+    <a href="mockup-2.html" class="card">
+      <iframe src="mockup-2.html" scrolling="no"></iframe>
+      <div class="card-meta">
+        <div class="card-num">Mockup 02</div>
+        <div class="card-title">Cinematic Overlay</div>
+        <div class="card-desc">Photo as section background with gradient. Text overlays the lower portion. Stats float on glass card.</div>
+        <span class="card-link">Open full</span>
+      </div>
+    </a>
+    <a href="mockup-3.html" class="card">
+      <iframe src="mockup-3.html" scrolling="no"></iframe>
+      <div class="card-meta">
+        <div class="card-num">Mockup 03</div>
+        <div class="card-title">Premium Light</div>
+        <div class="card-desc">White surface with photo card on top, centered text below. Bright, refined, less corporate-aggressive.</div>
+        <span class="card-link">Open full</span>
+      </div>
+    </a>
+  </div>
+</div>
+</body>
+</html>

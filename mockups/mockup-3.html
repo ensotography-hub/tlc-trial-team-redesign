@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#FFFFFF">
+<title>Mockup 03 — Premium Light · TLC Trial Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --white: #FFFFFF;
+    --offwhite: #FAFAF8;
+    --paper: #F5F2EC;
+    --ink: #131211;
+    --ink-2: #3E3B36;
+    --ink-3: #6A655B;
+    --mute: #9A938A;
+    --line: rgba(19, 18, 17, 0.10);
+    --line-soft: rgba(19, 18, 17, 0.06);
+    --gold: #B89149;
+    --gold-2: #C9A876;
+    --gold-deep: #927138;
+    --dark: #0A0A0C;
+    --sans: 'Inter', system-ui, sans-serif;
+    --display: 'Inter Tight', 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    background: var(--white);
+    color: var(--ink-2);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+  }
+
+  /* HEADER — light, with hamburger right */
+  .hdr {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .hdr-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.4rem;
+    height: 64px;
+  }
+  .brand img { height: 36px; }
+  .burger {
+    width: 44px; height: 44px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: transparent;
+    display: grid; place-items: center;
+    cursor: pointer;
+  }
+  .burger span,
+  .burger span::before,
+  .burger span::after {
+    content: "";
+    display: block;
+    width: 16px; height: 1.5px;
+    background: var(--ink);
+    position: relative;
+  }
+  .burger span::before { position: absolute; left: 0; top: -5px; }
+  .burger span::after { position: absolute; left: 0; top: 5px; }
+
+  /* HERO — light, contained photo card on top */
+  .hero { padding: 1.4rem 1.4rem 3rem; }
+
+  .photo {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3.6;
+    background: var(--paper);
+    margin-bottom: 2.4rem;
+    box-shadow: 0 20px 50px -28px rgba(19, 18, 17, 0.30);
+  }
+  .photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 22%;
+    display: block;
+  }
+  /* Gold underline accent at the bottom of the photo card */
+  .photo::after {
+    content: "";
+    position: absolute;
+    left: 50%; bottom: 0;
+    transform: translateX(-50%);
+    width: 60px; height: 3px;
+    background: var(--gold);
+    border-radius: 2px 2px 0 0;
+  }
+
+  .hero-copy { text-align: center; }
+
+  .kicker {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 1.2rem;
+  }
+
+  h1 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(2.2rem, 9vw, 2.8rem);
+    line-height: 1.04;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    margin: 0 auto 1.2rem;
+    max-width: 13ch;
+  }
+
+  .sub-accent {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--gold);
+    margin-bottom: 1.4rem;
+    letter-spacing: -0.02em;
+  }
+
+  .lede {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ink-3);
+    margin: 0 auto 2rem;
+    max-width: 36ch;
+  }
+
+  .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 2.8rem;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 320px;
+    height: 54px;
+    padding: 0 1.6rem;
+    background: var(--ink);
+    color: var(--white);
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    text-decoration: none;
+    transition: background 200ms ease;
+    border: 1px solid var(--ink);
+  }
+  .btn-primary:hover { background: transparent; color: var(--ink); }
+  .btn-primary svg { width: 16px; height: 16px; }
+
+  .btn-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    padding: 0.5rem 0;
+  }
+  .btn-phone svg { width: 14px; height: 14px; color: var(--gold-2); }
+
+  /* STATS — clean horizontal hairline divider between rows */
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line-soft);
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .stat {
+    text-align: center;
+    padding: 1rem 0.6rem;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .stat:nth-child(odd) { border-right: 1px solid var(--line-soft); }
+  .stat:nth-last-child(-n+2) { border-bottom: 0; }
+
+  .stat-fig {
+    display: block;
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+  .stat-fig em {
+    font-style: normal;
+    font-size: 0.6em;
+    color: var(--gold-2);
+    margin-left: 0.04em;
+    font-weight: 500;
+  }
+  .stat-label {
+    font-size: 0.74rem;
+    color: var(--ink-3);
+    letter-spacing: -0.005em;
+  }
+
+  .mockup-tag {
+    position: fixed;
+    bottom: 1rem; right: 1rem;
+    background: rgba(184, 145, 73, 0.10);
+    border: 1px solid var(--gold-2);
+    border-radius: 999px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--gold-deep);
+    letter-spacing: 0.06em;
+    z-index: 100;
+  }
+
+  @media (min-width: 480px) {
+    body {
+      max-width: 420px;
+      margin: 0 auto;
+      box-shadow: 0 0 80px rgba(0,0,0,0.1);
+      background: var(--white);
+      min-height: 100vh;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-row">
+    <a href="#" class="brand"><img src="../assets/img/tlc-logo-horz.png" alt="TLC Trial Team"></a>
+    <button class="burger" aria-label="Menu"><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="photo">
+    <img src="../assets/img/tania-clark.png" alt="The TLC Trial Team">
+  </div>
+
+  <div class="hero-copy">
+    <span class="kicker">Florida Personal Injury Trial Team</span>
+    <h1>Fighting for Florida accident victims for almost 20 years.</h1>
+    <div class="sub-accent">Millions recovered.</div>
+    <p class="lede">A car accident is a traumatic event that is life altering. In an instant, everything changes. We are here to fight for you.</p>
+
+    <div class="cta">
+      <a href="#contact" class="btn-primary">
+        Get Your Free Consultation
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="tel:+18772995539" class="btn-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        (877) 299-5539
+      </a>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-fig">$1.4M<em>+</em></span>
+        <span class="stat-label">Recent recovery</span>
+      </div>
+      <div class="stat">
+        <span class="stat-fig">172<em>+</em></span>
+        <span class="stat-label">5-star reviews</span>
+      </div>
+      <div class="stat">
+        <span class="stat-fig">20<em>yrs</em></span>
+        <span class="stat-label">Trial experience</span>
+      </div>
+      <div class="stat">
+        <span class="stat-fig">$0</span>
+        <span class="stat-label">Unless we win</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="mockup-tag">Mockup 03 · Premium Light</div>
+</body>
+</html>
