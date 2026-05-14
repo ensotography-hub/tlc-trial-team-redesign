@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#FAF4EA">
+<title>Iteration C — Premium Editorial · TLC Trial Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&display=swap">
+<style>
+  :root {
+    --cream: #FAF4EA;
+    --cream-2: #F3EBD8;
+    --paper: #EFE5CC;
+    --ink: #1A1612;
+    --ink-2: #4A3F33;
+    --ink-3: #6C5F4D;
+    --mute: #9D9079;
+    --line: rgba(26, 22, 18, 0.10);
+    --line-soft: rgba(26, 22, 18, 0.06);
+    --line-2: rgba(26, 22, 18, 0.18);
+    --gold: #B89149;
+    --gold-2: #C9A876;
+    --gold-deep: #927138;
+    --sans: 'Inter', system-ui, sans-serif;
+    --display: 'Inter Tight', 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--ink-2);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Subtle paper grain texture overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'><filter id='n'><feTurbulence baseFrequency='0.85' numOctaves='2'/><feColorMatrix values='0 0 0 0 0.6  0 0 0 0 0.5  0 0 0 0 0.4  0 0 0 0.4 0'/></filter><rect width='180' height='180' filter='url(%23n)' opacity='0.5'/></svg>");
+    opacity: 0.18;
+    mix-blend-mode: multiply;
+  }
+
+  /* HEADER */
+  .hdr {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(250, 244, 234, 0.86);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .hdr-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.4rem;
+    height: 64px;
+    position: relative;
+    z-index: 5;
+  }
+  .brand img { height: 36px; }
+
+  /* TEXT MENU button (not just icon) — Framer-style */
+  .menu-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 0.9rem 0.55rem 1rem;
+    background: transparent;
+    border: 1px solid var(--line-2);
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 200ms ease;
+  }
+  .menu-btn:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+  .menu-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 14px;
+  }
+  .menu-bars::before, .menu-bars::after {
+    content: ""; display: block;
+    width: 100%; height: 1.5px;
+    background: currentColor;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    z-index: 2;
+    padding: 2.2rem 1.4rem 3.2rem;
+  }
+
+  /* TOP META STRIP — editorial date stamp */
+  .meta-strip {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 2.2rem;
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .meta-strip .rule {
+    flex: 1;
+    height: 1px;
+    background: var(--line-2);
+  }
+  .meta-strip .dot {
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .hero-copy { text-align: left; }
+
+  /* Numbered chapter marker */
+  .chapter {
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    margin-bottom: 1.4rem;
+  }
+  .chapter-num {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 0.92rem;
+    color: var(--gold-2);
+    letter-spacing: -0.005em;
+  }
+  .chapter-label {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  /* MASSIVE H1 — the centerpiece */
+  h1 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(2.6rem, 11vw, 3.4rem);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    color: var(--ink);
+    margin: 0 0 1.4rem;
+    max-width: 14ch;
+  }
+  h1 .l2 {
+    display: block;
+    font-weight: 400;
+    color: var(--ink-2);
+    font-size: 0.78em;
+    letter-spacing: -0.035em;
+    margin-top: 0.3rem;
+  }
+
+  /* Sub accent — gold, refined */
+  .sub-accent {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.6rem;
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.94rem;
+    letter-spacing: -0.005em;
+    color: var(--gold-deep);
+  }
+  .sub-accent::before {
+    content: "";
+    width: 20px; height: 1.5px;
+    background: var(--gold);
+  }
+
+  .lede {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--ink-2);
+    margin: 0 0 2rem;
+    max-width: 36ch;
+  }
+
+  /* Two buttons side-by-side */
+  .cta-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+    margin-bottom: 2.6rem;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    height: 56px;
+    padding: 0 0.8rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    text-decoration: none;
+    transition: all 240ms cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1.5px solid transparent;
+    white-space: nowrap;
+  }
+  .btn svg { width: 14px; height: 14px; transition: transform 240ms ease; }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--cream);
+    border-color: var(--ink);
+  }
+  .btn-primary:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+  .btn-outline {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+  .btn-outline:hover { background: var(--ink); color: var(--cream); }
+  .btn-outline:hover svg { transform: translateX(3px); }
+
+  /* Photo — B&W with warm tint, refined frame */
+  .photo {
+    position: relative;
+    aspect-ratio: 4 / 4.2;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--paper);
+    margin: 0 0 2.6rem;
+    box-shadow: 0 24px 50px -30px rgba(26, 22, 18, 0.35);
+  }
+  .photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 22%;
+    display: block;
+    filter: grayscale(0.85) sepia(0.18) contrast(1.02) brightness(0.98);
+    transition: filter 600ms ease;
+  }
+  .photo:hover img { filter: grayscale(0.4) sepia(0.10) contrast(1.02) brightness(1); }
+
+  /* Small "TLC" gold seal in corner of photo */
+  .photo-seal {
+    position: absolute;
+    bottom: 1rem; left: 1rem;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 1px solid var(--gold);
+    display: grid; place-items: center;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--gold-deep);
+    letter-spacing: -0.02em;
+    box-shadow: 0 8px 20px -10px rgba(0,0,0,0.2);
+  }
+
+  /* STATS — horizontal row with vertical gold hairline dividers */
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 1.4rem 0 0.4rem;
+    border-top: 1px solid var(--line-2);
+    border-bottom: 1px solid var(--line-soft);
+    margin-bottom: 1.4rem;
+  }
+  .stat {
+    text-align: center;
+    padding: 0.4rem 0.3rem;
+    border-right: 1px solid var(--line-soft);
+  }
+  .stat:last-child { border-right: 0; }
+  .stat-fig {
+    display: block;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(1.1rem, 4.6vw, 1.4rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+  .stat-fig em {
+    font-style: normal;
+    font-size: 0.6em;
+    color: var(--gold-2);
+    margin-left: 0.04em;
+    font-weight: 500;
+  }
+  .stat-label {
+    font-size: 0.62rem;
+    color: var(--ink-3);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+
+  /* Scroll indicator */
+  .scroll-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .scroll-indicator svg {
+    width: 12px; height: 12px;
+    animation: bob 1.8s ease-in-out infinite;
+  }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(3px); }
+  }
+
+  .mockup-tag {
+    position: fixed;
+    bottom: 1rem; right: 1rem;
+    background: var(--ink);
+    border-radius: 999px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.06em;
+    z-index: 100;
+  }
+
+  @media (min-width: 480px) {
+    body {
+      max-width: 420px;
+      margin: 0 auto;
+      box-shadow: 0 0 80px rgba(0,0,0,0.15);
+      min-height: 100vh;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-row">
+    <a href="#" class="brand"><img src="../assets/img/tlc-logo-horz.png" alt="TLC Trial Team"></a>
+    <button class="menu-btn"><span class="menu-bars"></span>Menu</button>
+  </div>
+</header>
+
+<section class="hero">
+  <!-- Editorial date stamp -->
+  <div class="meta-strip">
+    <span>Est. 2006</span>
+    <span class="dot"></span>
+    <span>Florida</span>
+    <span class="rule"></span>
+    <span>Lutz · Winter Haven · Lakeland</span>
+  </div>
+
+  <div class="hero-copy">
+    <!-- Chapter marker -->
+    <div class="chapter">
+      <span class="chapter-num">No. 01</span>
+      <span class="chapter-label">The Firm</span>
+    </div>
+
+    <!-- Massive H1 with size variation -->
+    <h1>
+      Fighting for Florida accident victims.
+      <span class="l2">For almost 20 years.</span>
+    </h1>
+
+    <div class="sub-accent">Millions recovered.</div>
+
+    <p class="lede">A car accident is a traumatic event that is life altering. In an instant, everything changes. We are here to fight for you.</p>
+
+    <div class="cta-row">
+      <a href="tel:+18772995539" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        Call Now
+      </a>
+      <a href="#contact" class="btn btn-outline">
+        Free Consult
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Photo with B&W warm-tone treatment + gold "TLC" seal -->
+  <div class="photo">
+    <img src="../assets/img/tania-clark.png" alt="The TLC Trial Team">
+    <span class="photo-seal">TLC</span>
+  </div>
+
+  <!-- Stats as horizontal hairline row -->
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-fig">$1.4M<em>+</em></span>
+      <span class="stat-label">Recovery</span>
+    </div>
+    <div class="stat">
+      <span class="stat-fig">172<em>+</em></span>
+      <span class="stat-label">Reviews</span>
+    </div>
+    <div class="stat">
+      <span class="stat-fig">20<em>yrs</em></span>
+      <span class="stat-label">Trial</span>
+    </div>
+    <div class="stat">
+      <span class="stat-fig">$0</span>
+      <span class="stat-label">No-win</span>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    Continue
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
+
+<div class="mockup-tag">Iter C · Editorial</div>
+</body>
+</html>
