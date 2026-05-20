@@ -385,43 +385,12 @@
       </a>
       <h2>Connect with us.</h2>
     </header>
-    <div class="ig-grid reveal-stagger">
-      <a href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" class="ig-post">
-        <img src="assets/img/tania-family.jpg" alt="TLC Trial Team family photo" loading="lazy">
-        <div class="ig-overlay">
-          <div class="ig-meta">
-            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 42</span>
-            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> 5</span>
-          </div>
-        </div>
-      </a>
-      <a href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" class="ig-post">
-        <img src="assets/img/tlc-office.png" alt="TLC Trial Team office and staff" loading="lazy">
-        <div class="ig-overlay">
-          <div class="ig-meta">
-            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 38</span>
-            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> 3</span>
-          </div>
-        </div>
-      </a>
-      <a href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" class="ig-post">
-        <img src="assets/img/hero-bg-original.jpg" alt="TLC Trial Team courtroom advocacy" loading="lazy">
-        <div class="ig-overlay">
-          <div class="ig-meta">
-            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 56</span>
-            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> 8</span>
-          </div>
-        </div>
-      </a>
-      <a href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" class="ig-post">
-        <img src="assets/img/tania-portrait.jpg" alt="Attorney Tania L. Clark portrait" loading="lazy">
-        <div class="ig-overlay">
-          <div class="ig-meta">
-            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 64</span>
-            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> 12</span>
-          </div>
-        </div>
-      </a>
+
+    <!-- Elfsight Instagram Feed — live, auto-updates when @tlctrialteam posts -->
+    <!-- TODO: Replace the widget ID below with the TLC-specific Elfsight app ID
+         once created in the Elfsight dashboard (https://elfsight.com/instagram-feed-instashow/) -->
+    <div class="ig-widget-slot reveal">
+      <div class="elfsight-app-d5be8f82-0412-49ea-ae91-fbc027f12e2a" data-elfsight-app-lazy></div>
     </div>
   </div>
 </section>
@@ -585,5 +554,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 </script>
+
+<!-- Elfsight Instagram Feed platform -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
 </body>
 </html>

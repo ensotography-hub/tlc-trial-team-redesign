@@ -1140,13 +1140,25 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 500; line-height: 1.0
 .ig-head .eyebrow { color: var(--gold-deep); display: inline-flex; align-items: center; gap: 0.5rem; transition: color var(--d-fast) var(--ease); }
 .ig-head .eyebrow:hover { color: var(--ink-text); }
 .ig-head h2 { font-size: clamp(2rem, 3.4vw, 2.8rem); line-height: 1.1; }
-.ig-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+.ig-widget-slot {
+  position: relative;
+  max-width: 920px;
+  margin: 0 auto;
+  z-index: 1;
+  border-radius: var(--r-md);
+  overflow: hidden;
 }
-@media (max-width: 880px) { .ig-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 540px) { .ig-grid { gap: 0.5rem; } }
+
+/* Hide Elfsight free-tier branding badge. If it reappears,
+   upgrade to Elfsight Basic (~$6/mo) which removes it officially. */
+.ig-widget-slot a[href*="elfsight.com"],
+.ig-widget-slot [class*="Powered"],
+.ig-widget-slot [class*="powered"],
+.ig-widget-slot [class*="eapps-widget-toolbar"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+}
 .ig-post {
   position: relative;
   aspect-ratio: 1 / 1;
