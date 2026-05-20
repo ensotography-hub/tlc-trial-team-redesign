@@ -375,7 +375,7 @@
   </div>
 </section>
 
-<!-- Instagram Grid -->
+<!-- Instagram Grid — Custom live-link grid matching VibesByNeo pattern -->
 <section class="ig-section section-light">
   <div class="wrap">
     <header class="ig-head reveal">
@@ -386,11 +386,72 @@
       <h2>Connect with us.</h2>
     </header>
 
-    <!-- Elfsight Instagram Feed — live, auto-updates when @tlctrialteam posts -->
-    <!-- TODO: Replace the widget ID below with the TLC-specific Elfsight app ID
-         once created in the Elfsight dashboard (https://elfsight.com/instagram-feed-instashow/) -->
-    <div class="ig-widget-slot reveal">
-      <div class="elfsight-app-d5be8f82-0412-49ea-ae91-fbc027f12e2a" data-elfsight-app-lazy></div>
+    <!-- IG Profile Widget -->
+    <div class="ig-widget reveal">
+      <div class="ig-profile">
+        <div class="ig-profile-main">
+          <a class="ig-avatar" href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" aria-label="Open @tlctrialteam on Instagram">
+            <span class="ig-avatar-ring" aria-hidden="true"></span>
+            <span class="ig-avatar-disc">
+              <img src="assets/img/tlc-logo.png" alt="TLC Trial Team on Instagram" loading="lazy">
+            </span>
+          </a>
+          <div class="ig-info">
+            <div class="ig-name-row">
+              <a class="ig-name" href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener">TLC Trial Team</a>
+              <svg class="ig-verified" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#1d9bf0"/><path fill="#fff" d="M6.8 10.9 4.6 8.8l1-1 1.2 1.2 3.5-3.5 1 1z"/></svg>
+            </div>
+            <a class="ig-handle" href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener">@tlctrialteam</a>
+          </div>
+        </div>
+
+        <div class="ig-side">
+          <ul class="ig-stats" aria-label="Instagram account stats">
+            <li><strong>89</strong><span>Posts</span></li>
+            <li><strong>1.2K</strong><span>Followers</span></li>
+            <li><strong>312</strong><span>Following</span></li>
+          </ul>
+          <a class="ig-follow" href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" aria-label="Follow @tlctrialteam on Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"></rect><circle cx="12" cy="12" r="3.75"></circle><circle cx="17.25" cy="6.75" r="0.9" fill="currentColor" stroke="none"></circle></svg>
+            Follow
+          </a>
+        </div>
+      </div>
+
+      <!-- 4×2 Post Grid -->
+      <div class="ig-grid">
+        <a class="ig-tile" href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" aria-label="Instagram post">
+          <img src="assets/img/tania-family.jpg" alt="TLC Trial Team family photo" loading="lazy">
+        </a>
+        <a class="ig-tile" href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" aria-label="Instagram post">
+          <img src="assets/img/tlc-office.png" alt="TLC Trial Team office and staff" loading="lazy">
+        </a>
+        <a class="ig-tile" href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" aria-label="Instagram post">
+          <img src="assets/img/hero-bg-original.jpg" alt="TLC Trial Team courtroom advocacy" loading="lazy">
+        </a>
+        <a class="ig-tile" href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" aria-label="Instagram post">
+          <img src="assets/img/tania-portrait.jpg" alt="Attorney Tania L. Clark portrait" loading="lazy">
+        </a>
+        <a class="ig-tile" href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" aria-label="Instagram post">
+          <img src="assets/img/tania-clark.png" alt="Tania Clark attorney" loading="lazy">
+        </a>
+        <a class="ig-tile" href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" aria-label="Instagram post">
+          <img src="assets/img/tania-rivas.png" alt="TLC Trial Team attorney" loading="lazy">
+        </a>
+        <a class="ig-tile" href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" aria-label="Instagram post">
+          <img src="assets/img/badge-avvo.jpg" alt="Avvo Top Attorney badge" loading="lazy">
+        </a>
+        <a class="ig-tile" href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" aria-label="Instagram post">
+          <img src="assets/img/badge-fl-justice.jpg" alt="Florida Justice Association" loading="lazy">
+        </a>
+      </div>
+    </div>
+
+    <!-- See More CTA -->
+    <div class="ig-more-wrap reveal">
+      <a class="ig-more" href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener">
+        See more on Instagram →
+      </a>
     </div>
   </div>
 </section>
@@ -554,8 +615,5 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 </script>
-
-<!-- Elfsight Instagram Feed platform -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
 </body>
 </html>
