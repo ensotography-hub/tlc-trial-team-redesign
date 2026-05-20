@@ -4,515 +4,586 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#FFFFFF">
-<title>TLC Trial Team — Florida Personal Injury Counsel · Tania L. Clark, Esq.</title>
+<title>TLC Trial Team — Florida Personal Injury Counsel</title>
 <meta name="description" content="A car accident is a traumatic event that is life altering. In an instant, everything changes. Fighting for Florida accident victims for almost 20 years. Only pay if we win. (877) 299-5539.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0A0C'/%3E%3Ctext x='50' y='66' text-anchor='middle' font-family='Inter Tight, sans-serif' font-size='52' font-weight='600' letter-spacing='-3' fill='%23C9A876'%3ETLC%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/styles.css?v=28">
+<link rel="stylesheet" href="assets/css/styles.css?v=31">
 </head>
 <body>
 
-<!-- ─── HEADER ─── -->
-<header class="hdr">
-  <div class="wrap hdr-row">
-    <a href="#" class="brand" aria-label="TLC Trial Team — home">
-      <img src="assets/img/tlc-logo-horz.png" alt="TLC Trial Team">
+<!-- Top utility bar -->
+<div class="utility">
+  <div class="wrap">
+    <div class="left">
+      <span class="g-stars">★★★★★</span>
+      <span>5.0 on Google · 172+ reviews</span>
+    </div>
+    <div class="right">
+      <span class="hide">Available 24/7</span>
+      <span class="hide">·</span>
+      <span>Atendemos consultas en español</span>
+    </div>
+  </div>
+</div>
+
+<!-- Sticky Nav -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#" class="brand" aria-label="TLC Trial Team home">
+      <img src="assets/img/tlc-logo-horz.png" alt="TLC Trial Team" style="filter: brightness(0) invert(1) opacity(0.95);">
     </a>
-    <nav class="nav" aria-label="Primary">
+    <nav class="nav-links">
       <a href="#practice">Practice</a>
       <a href="#attorney">Attorney</a>
-      <a href="#why">Why TLC</a>
       <a href="#results">Results</a>
       <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
     </nav>
-    <a href="tel:+18772995539" class="hdr-cta">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-      <span>(877) 299-5539</span>
-    </a>
-    <button class="burger" aria-label="Menu"><span></span></button>
+    <div class="nav-cta">
+      <a href="tel:+18772995539" class="nav-phone">(877) 299-5539</a>
+      <a href="#contact" class="btn btn-primary">Free Consultation</a>
+      <button class="burger" aria-label="Open menu" id="burger"><span></span></button>
+    </div>
   </div>
 </header>
 
-<!-- ─── HERO — Premium Light, mobile-first centered ─── -->
-<section class="hero" aria-label="Introduction">
-  <div class="wrap hero-inner">
-    <div class="hero-copy">
-      <span class="hero-kicker">Florida Personal Injury Trial Team</span>
-      <h1>Fighting for Florida accident victims.<span class="l2">For almost 20 years.</span></h1>
-      <div class="hero-sub-accent">Millions recovered.</div>
-      <p class="hero-lede">
-        A car accident is a traumatic event that is life altering. In an instant, everything changes. Tania L. Clark and the TLC Trial Team are here to fight for you — serving Lakeland, Lutz, and Winter Haven.
-      </p>
+<!-- Mobile drawer -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-head">
+    <a href="#" class="brand"><img src="assets/img/tlc-logo-horz.png" alt="TLC Trial Team" style="filter: brightness(0) invert(1) opacity(0.95);"></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu">×</button>
+  </div>
+  <nav>
+    <a href="#practice">Practice</a>
+    <a href="#attorney">Attorney</a>
+    <a href="#results">Results</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="drawer-foot">
+    <a href="tel:+18772995539" class="btn btn-primary">(877) 299-5539</a>
+    <span style="font-size: 0.8rem; opacity: 0.6;">Atendemos consultas en español.</span>
+  </div>
+</div>
 
-      <div class="hero-cta">
-        <a href="tel:+18772995539" class="btn btn-primary-dark">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-          Call Now
-        </a>
-        <a href="#contact" class="btn btn-outline-dark">
-          Free Consultation
-        </a>
+<!-- Hero -->
+<section class="hero section-light">
+  <div class="wrap">
+    <div class="hero-split">
+      <div class="hero-left reveal">
+        <span class="hero-eyebrow">
+          <span>Florida Personal Injury Trial Team</span>
+        </span>
+        <h1>
+          Fighting for Florida accident victims.<br>
+          <span class="accent">For almost 20 years.</span>
+        </h1>
+        <p class="lede">
+          A car accident is a traumatic event that is life altering. In an instant, everything changes. Tania L. Clark and the TLC Trial Team are here to fight for you, serving Lakeland, Lutz, and Winter Haven.
+        </p>
+        <div class="hero-cta">
+          <a href="tel:+18772995539" class="btn btn-primary">Call Now</a>
+          <a href="#contact" class="btn btn-ghost">Free Consultation</a>
+        </div>
+      </div>
+      <div class="hero-right reveal">
+        <img src="assets/img/tania-clark.png" alt="Attorney Tania L. Clark" fetchpriority="high">
       </div>
     </div>
 
-    <div class="hero-photo">
-      <img src="assets/img/tania-clark.png" alt="The TLC Trial Team at the Lutz office">
-    </div>
-
-    <div class="hero-stats" aria-label="Key metrics">
-      <div class="hstat">
-        <span class="hstat-fig">$1.4M<em>+</em></span>
-        <span class="hstat-label">Recent recovery</span>
+    <div class="hero-meta reveal">
+      <div class="item">
+        <span class="num">$1.4M+</span>
+        <span class="lbl">Recent recovery</span>
       </div>
-      <div class="hstat">
-        <span class="hstat-fig">172<em>+</em></span>
-        <span class="hstat-label">5-star reviews</span>
+      <div class="item">
+        <span class="num">172+</span>
+        <span class="lbl">5-star reviews</span>
       </div>
-      <div class="hstat">
-        <span class="hstat-fig">20<em>yrs</em></span>
-        <span class="hstat-label">Trial experience</span>
+      <div class="item">
+        <span class="num">20yrs</span>
+        <span class="lbl">Trial experience</span>
       </div>
-      <div class="hstat">
-        <span class="hstat-fig">$0</span>
-        <span class="hstat-label">Unless we win</span>
+      <div class="item">
+        <span class="num">$0</span>
+        <span class="lbl">Unless we win</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── PRACTICE ─── -->
-<section class="practice" id="practice">
+<!-- Practice Areas -->
+<section class="practice section-light" id="practice">
   <div class="wrap">
-    <header class="sec-head">
-      <span class="kicker">Practice Areas</span>
-      <h2>A sympathetic attorney with a reputation for superior service.</h2>
-      <p>Whether a careless driver hit you on a freeway, or you wrenched your back tripping on a wet sidewalk in a shopping complex — we obtain fair compensation and justice.</p>
+    <header class="section-head reveal">
+      <span class="eyebrow">Practice Areas</span>
+      <h2>A sympathetic attorney with a reputation for <br><span class="accent">superior service.</span></h2>
+      <p>Whether a careless driver hit you on a freeway, or you wrenched your back tripping on a wet sidewalk in a shopping complex, we obtain fair compensation and justice.</p>
     </header>
 
-    <div class="ptiles">
-      <a href="#" class="ptile">
-        <span class="ptile-num">01</span>
-        <span class="ptile-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 13l2-5h14l2 5"/><rect x="2" y="13" width="20" height="6" rx="1"/><circle cx="6" cy="19" r="1.6" fill="currentColor"/><circle cx="18" cy="19" r="1.6" fill="currentColor"/></svg>
-        </span>
+    <div class="practice-grid reveal-stagger">
+      <div class="practice-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="22" height="22"><path d="M3 13l2-5h14l2 5"/><rect x="2" y="13" width="20" height="6" rx="1"/><circle cx="6" cy="19" r="1.6" fill="currentColor"/><circle cx="18" cy="19" r="1.6" fill="currentColor"/></svg>
+        </div>
         <h3>Car Accidents</h3>
         <p>An attorney who understands the complexities of Florida auto insurance and personal injury law.</p>
-        <span class="ptile-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </span>
-      </a>
-      <a href="#" class="ptile">
-        <span class="ptile-num">02</span>
-        <span class="ptile-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="7" width="13" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7"/><circle cx="6" cy="18" r="1.8" fill="currentColor"/><circle cx="18" cy="18" r="1.8" fill="currentColor"/></svg>
-        </span>
+      </div>
+
+      <div class="practice-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="22" height="22"><rect x="2" y="7" width="13" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7"/><circle cx="6" cy="18" r="1.8" fill="currentColor"/><circle cx="18" cy="18" r="1.8" fill="currentColor"/></svg>
+        </div>
         <h3>Truck Accidents</h3>
         <p>Catastrophic damage and life-altering consequences require experienced counsel.</p>
-        <span class="ptile-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </span>
-      </a>
-      <a href="#" class="ptile">
-        <span class="ptile-num">03</span>
-        <span class="ptile-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17l4-7h6l2 7M13 10l-1-5h4"/></svg>
-        </span>
-        <h3>Motorcycle Accidents</h3>
-        <p>A common occurrence in the Tampa Bay area — bias-aware advocacy for riders.</p>
-        <span class="ptile-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </span>
-      </a>
-      <a href="#" class="ptile">
-        <span class="ptile-num">04</span>
-        <span class="ptile-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 21l5-8 3 4 4-7 6 11"/><path d="M3 21h18"/></svg>
-        </span>
+      </div>
+
+      <div class="practice-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="22" height="22"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17l4-7h6l2 7M13 10l-1-5h4"/></svg>
+        </div>
+        <h3>Motorcycle</h3>
+        <p>A common occurrence in the Tampa Bay area with bias-aware advocacy for riders.</p>
+      </div>
+
+      <div class="practice-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="22" height="22"><path d="M3 21l5-8 3 4 4-7 6 11"/><path d="M3 21h18"/></svg>
+        </div>
         <h3>Slip &amp; Fall</h3>
         <p>Wet floors, uneven surfaces, poor lighting, damaged stairs and walkways.</p>
-        <span class="ptile-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </span>
-      </a>
-      <a href="#" class="ptile">
-        <span class="ptile-num">05</span>
-        <span class="ptile-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 10l9-6 9 6v11H3V10z"/><path d="M9 21V12h6v9M3 10h18"/></svg>
-        </span>
+      </div>
+
+      <div class="practice-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="22" height="22"><path d="M3 10l9-6 9 6v11H3V10z"/><path d="M9 21V12h6v9M3 10h18"/></svg>
+        </div>
         <h3>Premises Liability</h3>
         <p>Visitors have the right to expect a property is safe and well maintained.</p>
-        <span class="ptile-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </span>
-      </a>
-      <a href="#" class="ptile">
-        <span class="ptile-num">06</span>
-        <span class="ptile-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        </span>
+      </div>
+
+      <div class="practice-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="22" height="22"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
         <h3>Wrongful Death</h3>
         <p>When a family member is taken due to negligence, the grief can be unbearable.</p>
-        <span class="ptile-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </span>
-      </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ─── ATTORNEY — headline-first hierarchy, name under portrait ─── -->
-<section class="attorney" id="attorney">
-  <div class="wrap">
-    <header class="sec-head">
-      <span class="kicker">Meet the Attorney</span>
-      <h2>Personal counsel from a Florida advocate who knows what loss feels like.</h2>
-    </header>
-
-    <div class="attorney-grid">
-      <figure class="attorney-card">
-        <div class="attorney-photo-wrap">
-          <img src="assets/img/tania-rivas.png" alt="Attorney Tania L. Clark — Founder, TLC Trial Team">
-        </div>
-        <figcaption class="attorney-id">
-          <span class="aid-name">Tania L. Clark, Esq.</span>
-          <span class="aid-role">Founder · Trial Attorney</span>
-          <div class="attorney-socials">
-            <a href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/taniarivas" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM8.3 18H5.7v-8.5h2.6V18zM7 8.4a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM18.3 18h-2.6v-4.5c0-1.1-.4-1.8-1.4-1.8s-1.5.6-1.8 1.3c-.1.2-.1.5-.1.8V18H9.8s.04-7.7 0-8.5h2.6v1.2c.4-.5 1-1.3 2.6-1.3 1.9 0 3.3 1.2 3.3 3.9V18z"/></svg>
-            </a>
-            <a href="mailto:tania@tlctrialteam.com" aria-label="Email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            </a>
-          </div>
-        </figcaption>
-      </figure>
-
-      <div class="attorney-body">
-        <blockquote class="attorney-quote">
-          A car accident is a traumatic event that is life altering. In an instant, everything changes. I come from a family who understands what this feels like.
-        </blockquote>
-
-        <p>My family originated in Pinar del Río, Cuba. When Fidel Castro rose to power, my parents fled to Florida with only hope — and rebuilt their lives in Tampa through sacrifice and quiet work. That story shaped me. I went into law to bring new hope to others.</p>
-
-        <p>For nearly twenty years, our team has fought for the rights of those injured by someone else's negligence. At TLC Trial Team, we work diligently to help clients achieve justice and fairness.</p>
-
-        <dl class="attorney-meta">
-          <div>
-            <dt>Education</dt>
-            <dd>University of South Florida, 2001<br>Stetson University College of Law, 2005</dd>
-          </div>
-          <div>
-            <dt>Memberships</dt>
-            <dd>Hillsborough County Bar Assoc.<br>Florida Justice Association<br>Tampa Bay Trial Lawyers</dd>
-          </div>
-        </dl>
-      </div>
+<!-- Split feature: Attorney -->
+<section class="section-light" id="attorney" style="padding-top: 0;">
+  <div class="wrap split">
+    <div class="split-img reveal">
+      <img src="assets/img/tania-rivas.png" alt="Attorney Tania L. Clark" loading="lazy">
     </div>
-
-    <div class="attorney-awards" aria-label="Recognition">
-      <span class="awards-label">Recognition</span>
-      <div class="awards-row">
+    <div class="split-text reveal">
+      <span class="eyebrow">Meet the Attorney</span>
+      <h2>Florida advocate who knows what<br><span class="accent">loss feels like.</span></h2>
+      <p>My family originated in Pinar del Río, Cuba. When Fidel Castro rose to power, my parents fled to Florida with only hope, and rebuilt their lives in Tampa through sacrifice and quiet work. That story shaped me. I went into law to bring new hope to others.</p>
+      <p>For nearly twenty years, our team has fought for the rights of those injured by someone else's negligence. At TLC Trial Team, we work diligently to help clients achieve justice and fairness.</p>
+      
+      <!-- Socials -->
+      <div class="footer-social" style="margin-top: 1rem;">
+        <a href="https://www.facebook.com/TLCtrialteamLakeland/" target="_blank" rel="noopener" aria-label="Facebook" style="border-color: var(--line-2); color: var(--gold-deep);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9.5C10.5 7 12 5.7 14.2 5.7c1 0 2.1.2 2.1.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12h2.7l-.4 3h-2.3v7A10 10 0 0022 12z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" aria-label="Instagram" style="border-color: var(--line-2); color: var(--gold-deep);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/taniarivas" target="_blank" rel="noopener" aria-label="LinkedIn" style="border-color: var(--line-2); color: var(--gold-deep);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM8.3 18H5.7v-8.5h2.6V18zM7 8.4a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM18.3 18h-2.6v-4.5c0-1.1-.4-1.8-1.4-1.8s-1.5.6-1.8 1.3c-.1.2-.1.5-.1.8V18H9.8s.04-7.7 0-8.5h2.6v1.2c.4-.5 1-1.3 2.6-1.3 1.9 0 3.3 1.2 3.3 3.9V18z"/></svg>
+        </a>
+        <a href="https://www.google.com/search?q=TLC+Trial+Team+Lutz+reviews" target="_blank" rel="noopener" aria-label="Google" style="border-color: var(--line-2); color: var(--gold-deep);">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+        </a>
+      </div>
+      
+      <!-- Awards -->
+      <div class="awards-row" style="margin-top: 1rem; border-top: 1px solid var(--line); padding-top: 1.4rem;">
         <img src="assets/img/badge-ntl.png" alt="National Trial Lawyers Top 100">
         <img src="assets/img/badge-multimillion.png" alt="Multi-Million Dollar Advocates Forum">
         <img src="assets/img/badge-top-attorney.png" alt="Top Attorney 2022">
         <img src="assets/img/badge-avvo.jpg" alt="Avvo Clients' Choice">
         <img src="assets/img/badge-fl-justice.jpg" alt="Florida Justice Association">
+        <img src="assets/img/badge-1.png" alt="Award">
+        <img src="assets/img/badge-2.png" alt="Award">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── WHY TLC — value cards with ICONS not numbers, left-aligned ─── -->
-<section class="why" id="why">
+<!-- Why TLC -->
+<section class="practice section-light" id="why" style="background: var(--paper-2); padding-top: clamp(3rem, 5vw, 5rem);">
   <div class="wrap">
-    <header class="sec-head">
-      <span class="kicker">Why TLC Trial Team</span>
-      <h2>Personalized and compassionate legal services.</h2>
-      <p>At the TLC Trial Team, we work diligently to help clients achieve justice and fairness — preparing every case for trial and treating every client like family.</p>
+    <header class="section-head reveal">
+      <span class="eyebrow">Why TLC Trial Team</span>
+      <h2>Personalized and compassionate<br><span class="accent">legal services.</span></h2>
+      <p>We work diligently to help clients achieve justice and fairness, preparing every case for trial and treating every client like family.</p>
     </header>
 
-    <div class="why-grid">
-      <article class="why-card">
-        <span class="why-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.5-9.5-9C0.5 8.5 3 4 7 4c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.5 4.5 4.5 8-2.5 4.5-9.5 9-9.5 9z"/></svg>
-        </span>
+    <div class="practice-grid reveal-stagger">
+      <div class="practice-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="22" height="22"><path d="M12 21s-7-4.5-9.5-9C0.5 8.5 3 4 7 4c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.5 4.5 4.5 8-2.5 4.5-9.5 9-9.5 9z"/></svg>
+        </div>
         <h3>Personalized service</h3>
         <p>TLC Trial Team focuses on providing our clients with personalized and compassionate legal services.</p>
-      </article>
-      <article class="why-card">
-        <span class="why-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
-        </span>
+      </div>
+
+      <div class="practice-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="22" height="22"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+        </div>
         <h3>Bilingual team</h3>
         <p>Our team members speak both English and Spanish, serving clients who may not speak English as a first language.</p>
-      </article>
-      <article class="why-card">
-        <span class="why-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        </span>
-        <h3>Accessible &amp; flexible</h3>
+      </div>
+
+      <div class="practice-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="22" height="22"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <h3>Flexible</h3>
         <p>We're happy to travel to you, and we're flexible enough to accommodate challenging schedules.</p>
-      </article>
-      <article class="why-card">
-        <span class="why-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2.5l8 3v6.5c0 5-3.4 8.6-8 9.5-4.6-.9-8-4.5-8-9.5V5.5l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
-        </span>
+      </div>
+
+      <div class="practice-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="22" height="22"><path d="M12 2.5l8 3v6.5c0 5-3.4 8.6-8 9.5-4.6-.9-8-4.5-8-9.5V5.5l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
         <h3>Only pay if we win</h3>
-        <p>You pay nothing out of pocket. Our fee comes from the recovery — if there isn't one, you owe us nothing.</p>
-      </article>
+        <p>You pay nothing out of pocket. Our fee comes from the recovery. If there isn't one, you owe us nothing.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ─── CASE RESULTS — editorial table treatment ─── -->
-<section class="results" id="results">
+<!-- Results -->
+<section class="results section-light" id="results">
   <div class="wrap">
-    <header class="sec-head sec-head--split">
+    <div class="results-head reveal">
       <div>
-        <span class="kicker">Case Results</span>
-        <h2>Recent recoveries.</h2>
+        <span class="eyebrow">
+          <span>Case Results</span>
+        </span>
+        <h2>Recent <span class="accent">recoveries.</span></h2>
       </div>
-      <p>Past results don't guarantee a future one. Every case turns on its facts under Florida law. These are some of what the firm has been able to recover for clients in recent years.</p>
-    </header>
-
-    <article class="result-feature">
-      <div class="rf-meta">
-        <span class="rf-amount">$1.4<em>M</em><sup>+</sup></span>
-        <div class="rf-detail">
-          <span class="rf-tag">Most recent settlement</span>
-          <span class="rf-case">Truck accident · Pinellas County</span>
-          <p>Spinal injury and traumatic brain injury after our client was rear-ended by a dump truck on Ulmerton Road in Clearwater. Full policy limits recovered.</p>
+      <div class="results-head-meta">
+        <p>Past results don't guarantee a future one. Every case turns on its facts under Florida law. These are some of what the firm has been able to recover for clients in recent years.</p>
+        <a href="#contact" class="btn-ink">Get a Free Case Review</a>
+      </div>
+    </div>
+    
+    <div class="results-list reveal-stagger">
+      <div class="results-item">
+        <div class="results-item-num">$1.4M<sup>+</sup></div>
+        <div class="results-item-info">
+          <div class="results-item-lbl">Truck accident</div>
+          <div class="results-item-desc">Spinal injury and traumatic brain injury after our client was rear-ended by a dump truck.</div>
         </div>
       </div>
-    </article>
-
-    <div class="rtable" role="table" aria-label="Additional recoveries">
-      <div class="rtable-head" role="row">
-        <span role="columnheader">Amount</span>
-        <span role="columnheader">Case</span>
-        <span role="columnheader">Location</span>
-        <span role="columnheader">Outcome</span>
+      <div class="results-item">
+        <div class="results-item-num">$850K</div>
+        <div class="results-item-info">
+          <div class="results-item-lbl">Multi-vehicle collision</div>
+          <div class="results-item-desc">Substantial recovery for our client following a multi-vehicle pileup in Tampa.</div>
+        </div>
       </div>
-      <a href="#" class="rtable-row" role="row">
-        <span class="rrow-amt" role="cell">$850K</span>
-        <span class="rrow-case" role="cell">Multi-vehicle collision</span>
-        <span class="rrow-loc" role="cell">Tampa</span>
-        <span class="rrow-out" role="cell">Settlement</span>
-      </a>
-      <a href="#" class="rtable-row" role="row">
-        <span class="rrow-amt" role="cell">$800K</span>
-        <span class="rrow-case" role="cell">Wrongful death</span>
-        <span class="rrow-loc" role="cell">Haines City</span>
-        <span class="rrow-out" role="cell">Settlement</span>
-      </a>
-      <a href="#" class="rtable-row" role="row">
-        <span class="rrow-amt" role="cell">$775K</span>
-        <span class="rrow-case" role="cell">Auto accident · sole-cause</span>
-        <span class="rrow-loc" role="cell">Tampa Bay</span>
-        <span class="rrow-out" role="cell">Verdict</span>
-      </a>
-      <a href="#" class="rtable-row" role="row">
-        <span class="rrow-amt" role="cell">$750K</span>
-        <span class="rrow-case" role="cell">Rear-end + surgery</span>
-        <span class="rrow-loc" role="cell">Lutz</span>
-        <span class="rrow-out" role="cell">Settlement</span>
-      </a>
-      <a href="#" class="rtable-row" role="row">
-        <span class="rrow-amt" role="cell">$600K</span>
-        <span class="rrow-case" role="cell">Side-swipe collision</span>
-        <span class="rrow-loc" role="cell">I-275, Tampa</span>
-        <span class="rrow-out" role="cell">Settlement</span>
-      </a>
+      <div class="results-item">
+        <div class="results-item-num">$800K</div>
+        <div class="results-item-info">
+          <div class="results-item-lbl">Wrongful death</div>
+          <div class="results-item-desc">Secured compensation for the family of a loved one lost in Haines City.</div>
+        </div>
+      </div>
+      <div class="results-item">
+        <div class="results-item-num">$775K</div>
+        <div class="results-item-info">
+          <div class="results-item-lbl">Auto accident</div>
+          <div class="results-item-desc">Jury verdict in Tampa Bay for a severe single-cause auto collision.</div>
+        </div>
+      </div>
+      <div class="results-item">
+        <div class="results-item-num">$750K</div>
+        <div class="results-item-info">
+          <div class="results-item-lbl">Rear-end collision</div>
+          <div class="results-item-desc">Settlement in Lutz for a client who required surgery following a rear-end impact.</div>
+        </div>
+      </div>
     </div>
-
-    <a href="#" class="btn-text results-all">View all case results <span aria-hidden="true">→</span></a>
+    
+    <div class="results-disclaimer reveal">Most cases are resolved without a lawsuit. But we prepare every case as if it's going to trial.</div>
   </div>
 </section>
 
-<!-- ─── REVIEWS — carousel ─── -->
-<section class="reviews" id="reviews">
-  <div class="wrap reviews-head">
-    <div>
-      <span class="kicker">Reviews</span>
-      <h2>What our clients say.</h2>
-    </div>
-    <div class="rev-summary">
-      <span class="rev-stars">★★★★★</span>
-      <span class="rev-summary-num"><b>5.0</b></span>
-      <span class="rev-summary-meta">172+ Google reviews</span>
-    </div>
+<!-- Reviews Marquee -->
+<section class="section-light" id="reviews" style="padding-top: clamp(4rem, 7vw, 7rem);">
+  <div class="wrap">
+    <header class="reviews-head reveal">
+      <span class="eyebrow">Testimonials</span>
+      <h2>What our <span class="accent">clients say.</span></h2>
+      <div class="reviews-rating">
+        <span class="rating-num">5.0</span>
+        <div class="rating-info">
+          <span class="stars">★★★★★</span>
+          <span class="rating-meta">Based on <strong>172+</strong> reviews</span>
+        </div>
+        <a href="https://www.google.com/search?q=TLC+Trial+Team+Lutz+reviews" target="_blank" rel="noopener" class="rating-google">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+          Google
+        </a>
+      </div>
+    </header>
   </div>
 
-  <div class="rev-marquee" aria-label="Client reviews">
-    <div class="rev-track">
-      <article class="rcard">
-        <span class="rev-stars">★★★★★</span>
-        <p>TLC Trial Team changed my life. They fought for me when no one else would — and got me more than I ever expected. From the first phone call to the final wire, Tania treated me like family.</p>
-        <footer><span class="rcard-name">Maria S.</span><span class="rcard-src">Google</span></footer>
+  <div class="reviews-marquee reveal">
+    <div class="reviews-track">
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"TLC Trial Team changed my life. They fought for me when no one else would and got me more than I ever expected. From the first phone call to the final wire, Tania treated me like family."</p>
+        <div class="review-who"><div class="avatar">M</div><div><div class="name">Maria S.</div><div class="src">Google Review</div></div></div>
       </article>
-      <article class="rcard">
-        <span class="rev-stars">★★★★★</span>
-        <p>Tania and her paralegal handled my case with real care. Their professionalism and constant communication made all the difference.</p>
-        <footer><span class="rcard-name">James R.</span><span class="rcard-src">Google</span></footer>
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Tania and her paralegal handled my case with real care. Their professionalism and constant communication made all the difference."</p>
+        <div class="review-who"><div class="avatar">J</div><div><div class="name">James R.</div><div class="src">Google Review</div></div></div>
       </article>
-      <article class="rcard">
-        <span class="rev-stars">★★★★★</span>
-        <p>The attorneys provided compassionate, clear guidance from day one. They explained every step in plain language. I left feeling heard.</p>
-        <footer><span class="rcard-name">Lisette H.</span><span class="rcard-src">Google</span></footer>
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"The attorneys provided compassionate, clear guidance from day one. They explained every step in plain language. I left feeling heard."</p>
+        <div class="review-who"><div class="avatar">L</div><div><div class="name">Lisette H.</div><div class="src">Google Review</div></div></div>
       </article>
-      <article class="rcard">
-        <span class="rev-stars">★★★★★</span>
-        <p>After my crash on I-275, I was overwhelmed. The TLC team handled the insurance maze and got a result I didn't think was possible.</p>
-        <footer><span class="rcard-name">Andre P.</span><span class="rcard-src">Google</span></footer>
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"After my crash on I-275, I was overwhelmed. The TLC team handled the insurance maze and got a result I didn't think was possible."</p>
+        <div class="review-who"><div class="avatar">A</div><div><div class="name">Andre P.</div><div class="src">Google Review</div></div></div>
       </article>
-      <article class="rcard">
-        <span class="rev-stars">★★★★★</span>
-        <p>Bilingual staff was a relief for my parents. Tania herself called us in Spanish to walk through the settlement. Five stars without hesitation.</p>
-        <footer><span class="rcard-name">Esmeralda P.</span><span class="rcard-src">Google</span></footer>
-      </article>
-      <article class="rcard">
-        <span class="rev-stars">★★★★★</span>
-        <p>I never felt like simply another file number. Tania and the team transformed a terrifying situation into a process I could navigate with confidence.</p>
-        <footer><span class="rcard-name">Rosa M.</span><span class="rcard-src">Google</span></footer>
-      </article>
-      <article class="rcard" aria-hidden="true">
-        <span class="rev-stars">★★★★★</span>
-        <p>TLC Trial Team changed my life. They fought for me when no one else would — and got me more than I ever expected. From the first phone call to the final wire, Tania treated me like family.</p>
-        <footer><span class="rcard-name">Maria S.</span><span class="rcard-src">Google</span></footer>
-      </article>
-      <article class="rcard" aria-hidden="true">
-        <span class="rev-stars">★★★★★</span>
-        <p>Tania and her paralegal handled my case with real care. Their professionalism and constant communication made all the difference.</p>
-        <footer><span class="rcard-name">James R.</span><span class="rcard-src">Google</span></footer>
-      </article>
-      <article class="rcard" aria-hidden="true">
-        <span class="rev-stars">★★★★★</span>
-        <p>The attorneys provided compassionate, clear guidance from day one. They explained every step in plain language. I left feeling heard.</p>
-        <footer><span class="rcard-name">Lisette H.</span><span class="rcard-src">Google</span></footer>
-      </article>
-      <article class="rcard" aria-hidden="true">
-        <span class="rev-stars">★★★★★</span>
-        <p>After my crash on I-275, I was overwhelmed. The TLC team handled the insurance maze and got a result I didn't think was possible.</p>
-        <footer><span class="rcard-name">Andre P.</span><span class="rcard-src">Google</span></footer>
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Bilingual staff was a relief for my parents. Tania herself called us in Spanish to walk through the settlement. Five stars without hesitation."</p>
+        <div class="review-who"><div class="avatar">E</div><div><div class="name">Esmeralda P.</div><div class="src">Google Review</div></div></div>
       </article>
     </div>
   </div>
 
-  <div class="wrap reviews-foot">
-    <a href="https://www.google.com/search?q=TLC+Trial+Team+Lutz+reviews" target="_blank" rel="noopener" class="btn-text">Read all 172 reviews on Google <span aria-hidden="true">→</span></a>
+  <div class="reviews-foot reveal">
+    <a href="https://www.google.com/search?q=TLC+Trial+Team+Lutz+reviews" target="_blank" rel="noopener" class="btn btn-ghost">See more reviews on Google →</a>
   </div>
 </section>
 
-<!-- ─── CONTACT ─── -->
-<section class="contact" id="contact">
-  <div class="wrap contact-grid">
-    <div class="contact-copy">
-      <span class="kicker">Request a Free Consultation</span>
-      <h2>Tell us about your case.</h2>
-      <p>An attorney will respond within 24 hours, seven days a week. We're happy to travel to you, and we're flexible enough to accommodate challenging schedules.</p>
-      <a href="tel:+18772995539" class="contact-phone">(877) 299-5539</a>
-      <p class="contact-sub"><strong>Only pay if we win.</strong> Atendemos consultas en español.</p>
+<!-- Instagram Grid -->
+<section class="ig-section section-light">
+  <div class="wrap">
+    <header class="ig-head reveal">
+      <a href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        <span>@tlctrialteam</span>
+      </a>
+      <h2>Connect with us.</h2>
+    </header>
+    <div class="ig-grid reveal-stagger">
+      <a href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" class="ig-post">
+        <img src="assets/img/tania-family.jpg" alt="TLC Trial Team family photo" loading="lazy">
+        <div class="ig-overlay">
+          <div class="ig-meta">
+            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 42</span>
+            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> 5</span>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" class="ig-post">
+        <img src="assets/img/tlc-office.png" alt="TLC Trial Team office and staff" loading="lazy">
+        <div class="ig-overlay">
+          <div class="ig-meta">
+            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 38</span>
+            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> 3</span>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" class="ig-post">
+        <img src="assets/img/hero-bg-original.jpg" alt="TLC Trial Team courtroom advocacy" loading="lazy">
+        <div class="ig-overlay">
+          <div class="ig-meta">
+            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 56</span>
+            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> 8</span>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" class="ig-post">
+        <img src="assets/img/tania-portrait.jpg" alt="Attorney Tania L. Clark portrait" loading="lazy">
+        <div class="ig-overlay">
+          <div class="ig-meta">
+            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 64</span>
+            <span class="ig-stat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> 12</span>
+          </div>
+        </div>
+      </a>
     </div>
-
-    <form class="form" novalidate>
-      <div class="form-row">
-        <label><span>First name</span><input type="text" required></label>
-        <label><span>Last name</span><input type="text" required></label>
-      </div>
-      <div class="form-row">
-        <label><span>Phone</span><input type="tel" required placeholder="(813) 555-0123"></label>
-        <label><span>Email <em>(optional)</em></span><input type="email"></label>
-      </div>
-      <label><span>Briefly, what happened?</span><textarea rows="4" placeholder="No legal language needed."></textarea></label>
-      <button type="button" class="btn btn-gold btn-block">
-        Get Your Free Consultation
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </button>
-      <p class="form-fine">Confidential. Submitting does not create an attorney-client relationship.</p>
-    </form>
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
-<footer class="ftr">
-  <div class="wrap ftr-grid">
-    <div class="ftr-brand">
-      <a href="#" class="brand"><img src="assets/img/tlc-logo-horz.png" alt="TLC Trial Team"></a>
-      <p class="ftr-tag">Justice. Results. Respect.</p>
-      <div class="ftr-social">
-        <a href="https://www.facebook.com/TLCtrialteamLakeland/" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9.5C10.5 7 12 5.7 14.2 5.7c1 0 2.1.2 2.1.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12h2.7l-.4 3h-2.3v7A10 10 0 0022 12z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/taniarivas" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM8.3 18H5.7v-8.5h2.6V18zM7 8.4a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM18.3 18h-2.6v-4.5c0-1.1-.4-1.8-1.4-1.8s-1.5.6-1.8 1.3c-.1.2-.1.5-.1.8V18H9.8s.04-7.7 0-8.5h2.6v1.2c.4-.5 1-1.3 2.6-1.3 1.9 0 3.3 1.2 3.3 3.9V18z"/></svg>
-        </a>
+<!-- Contact -->
+<section class="cta section-light" id="contact">
+  <div class="wrap">
+    <div class="cta-grid">
+      <div class="cta-copy reveal">
+        <span class="eyebrow">Request a Free Consultation</span>
+        <h2>Tell us about your <span class="accent">case.</span></h2>
+        <p>An attorney will respond within 24 hours, seven days a week. We're happy to travel to you, and we're flexible enough to accommodate challenging schedules.</p>
+        <a href="tel:+18772995539" class="cta-phone">(877) 299-5539</a>
+        <div class="cta-meta">
+          <strong>Only pay if we win.</strong><br>
+          Atendemos consultas en español.
+        </div>
       </div>
-    </div>
-
-    <div class="ftr-col">
-      <h5>Offices</h5>
-      <div class="ftr-offices">
-        <p><strong>Lutz · HQ</strong><br>17513 N. Dale Mabry Hwy<br>Lutz, FL 33548<br><a href="tel:+18134064460">(813) 406-4460</a></p>
-        <p><strong>Winter Haven</strong><br>274 W. Central Ave., Suite A<br>Winter Haven, FL 33880<br><a href="tel:+18632995539">(863) 299-5539</a></p>
-        <p><strong>Lakeland</strong><br>1102 Florida Ave S<br>Lakeland, FL 33803<br><a href="tel:+18632131457">(863) 213-1457</a></p>
+      <div class="cta-form reveal">
+        <form class="form" novalidate>
+          <div class="form-row">
+            <label><span>First name</span><input type="text" required></label>
+            <label><span>Last name</span><input type="text" required></label>
+          </div>
+          <div class="form-row">
+            <label><span>Phone</span><input type="tel" required placeholder="(813) 555-0123"></label>
+            <label><span>Email <em>(optional)</em></span><input type="email"></label>
+          </div>
+          <label><span>Briefly, what happened?</span><textarea rows="4" placeholder="No legal language needed."></textarea></label>
+          <button type="button" class="btn btn-primary" style="width: 100%;">
+            Get Your Free Consultation
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="margin-left: 0.4rem; width:16px; height:16px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form-fine">Confidential. Submitting does not create an attorney-client relationship.</p>
+        </form>
       </div>
-    </div>
-
-    <div class="ftr-col">
-      <h5>Practice</h5>
-      <ul>
-        <li><a href="#">Auto Accidents</a></li>
-        <li><a href="#">Truck Accidents</a></li>
-        <li><a href="#">Motorcycle</a></li>
-        <li><a href="#">Slip &amp; Fall</a></li>
-        <li><a href="#">Premises Liability</a></li>
-        <li><a href="#">Wrongful Death</a></li>
-      </ul>
-    </div>
-
-    <div class="ftr-col">
-      <h5>Areas Served</h5>
-      <ul class="ftr-areas">
-        <li>Tampa</li>
-        <li>Brandon</li>
-        <li>Wesley Chapel</li>
-        <li>Clearwater</li>
-        <li>St. Petersburg</li>
-        <li>Sarasota</li>
-        <li>Bradenton</li>
-        <li>Land O' Lakes</li>
-        <li>Largo</li>
-        <li>New Port Richey</li>
-        <li>Palm Harbor</li>
-        <li>Spring Hill</li>
-      </ul>
     </div>
   </div>
+</section>
 
-  <div class="wrap ftr-meta">
-    <span>© 2010–2026 TLC Trial Team. All rights reserved.</span>
-    <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Disclaimer</a></span>
+<!-- Footer -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="brand" aria-label="TLC Trial Team home"><img src="assets/img/tlc-logo-horz.png" alt="TLC Trial Team"></a>
+        <div class="footer-tag">Justice. Results. Respect.</div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/TLCtrialteamLakeland/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9.5C10.5 7 12 5.7 14.2 5.7c1 0 2.1.2 2.1.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12h2.7l-.4 3h-2.3v7A10 10 0 0022 12z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/tlctrialteam/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/taniarivas" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM8.3 18H5.7v-8.5h2.6V18zM7 8.4a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM18.3 18h-2.6v-4.5c0-1.1-.4-1.8-1.4-1.8s-1.5.6-1.8 1.3c-.1.2-.1.5-.1.8V18H9.8s.04-7.7 0-8.5h2.6v1.2c.4-.5 1-1.3 2.6-1.3 1.9 0 3.3 1.2 3.3 3.9V18z"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h5>Practice</h5>
+        <ul>
+          <li><a href="#">Auto Accidents</a></li>
+          <li><a href="#">Truck Accidents</a></li>
+          <li><a href="#">Motorcycle</a></li>
+          <li><a href="#">Slip &amp; Fall</a></li>
+          <li><a href="#">Premises Liability</a></li>
+          <li><a href="#">Wrongful Death</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Areas Served</h5>
+        <ul class="footer-areas">
+          <li>Tampa</li>
+          <li>Brandon</li>
+          <li>Wesley Chapel</li>
+          <li>Clearwater</li>
+          <li>St. Petersburg</li>
+          <li>Sarasota</li>
+          <li>Bradenton</li>
+          <li>Land O' Lakes</li>
+          <li>Largo</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Offices</h5>
+        <div class="footer-offices">
+          <p><strong>Lutz · HQ</strong><br>17513 N. Dale Mabry Hwy<br>Lutz, FL 33548<br><a href="tel:+18134064460">(813) 406-4460</a></p>
+          <p><strong>Winter Haven</strong><br>274 W. Central Ave., Suite A<br>Winter Haven, FL 33880<br><a href="tel:+18632995539">(863) 299-5539</a></p>
+          <p><strong>Lakeland</strong><br>1102 Florida Ave S<br>Lakeland, FL 33803<br><a href="tel:+18632131457">(863) 213-1457</a></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-meta">
+      <span>© 2010–2026 TLC Trial Team. All rights reserved.</span>
+      <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Disclaimer</a></span>
+    </div>
+    <p class="footer-disclaimer">The information on this site is for general purposes only and is not legal advice. Submission of a contact form does not create an attorney-client relationship. Past results do not guarantee a similar outcome.</p>
   </div>
 </footer>
 
-<!-- ─── STICKY MOBILE CTA — shows on scroll, hides at footer ─── -->
-<a href="#contact" class="sticky-cta" id="stickyCta" aria-label="Free case review">
-  <span class="sc-label">Free Case Review</span>
-  <span class="sc-phone">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-    (877) 299-5539
-  </span>
-</a>
+<script>
+// Sticky nav scrolled state
+const nav = document.getElementById('nav');
+let scrolled = false;
+function onScroll() {
+  const isScrolled = window.scrollY > 12;
+  if (isScrolled !== scrolled) {
+    nav.classList.toggle('scrolled', isScrolled);
+    scrolled = isScrolled;
+  }
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-<script src="assets/js/main.js?v=24"></script>
+// Mobile drawer
+const burger = document.getElementById('burger');
+const drawer = document.getElementById('drawer');
+const drawerClose = document.getElementById('drawerClose');
+const openDrawer = () => { drawer.classList.add('open'); document.body.style.overflow = 'hidden'; };
+const closeDrawer = () => { drawer.classList.remove('open'); document.body.style.overflow = ''; };
+burger.addEventListener('click', openDrawer);
+drawerClose.addEventListener('click', closeDrawer);
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+// Marquee — duplicate track contents for seamless loop
+const marqueeTrack = document.querySelector('.reviews-track');
+if (marqueeTrack) {
+  marqueeTrack.innerHTML += marqueeTrack.innerHTML;
+}
+
+// Reveal on scroll
+const io = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+
+// Smooth scroll with anchor offset for sticky nav
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    if (id.length > 1) {
+      const target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 70;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    }
+  });
+});
+</script>
 </body>
 </html>
